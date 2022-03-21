@@ -8,3 +8,16 @@
 .homes-container {
     position: relative;
 }
+
+.homes-group-items {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.homes-group-items-slider {
+    display: flex;
+    justify-content: flex-start;
+    max-width: inherit;
+    transition: all ease 1s;
+}
