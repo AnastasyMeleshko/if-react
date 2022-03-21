@@ -71,7 +71,7 @@ class HomesSection extends React.Component {
                     <div className="homes-group-items col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div className="homes-group-items-slider col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             {data.map(element => <HomesItem key={element.id} item={element} />)}
-                        </div>
+                        </div>git
                     </div>
                 </div>
             </section>
