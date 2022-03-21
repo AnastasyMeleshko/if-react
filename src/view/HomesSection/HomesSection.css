@@ -1,3 +1,8 @@
+:root {
+    --homes-img-height: 296px;
+    --homes-arrow-height: 40px;
+}
+
 .homes {
     background-color: #EAF0F9;
     display: flex;
@@ -11,7 +16,6 @@
 
 .homes-group-items {
     display: flex;
-    justify-content: center;
     overflow: hidden;
 }
 
@@ -20,4 +24,24 @@
     justify-content: flex-start;
     max-width: inherit;
     transition: all ease 1s;
+}
+
+.arrow-homes {
+    position: absolute;
+    right: 0;
+    top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2) ;
+    z-index: 5;
+    transform: translateX(60%);
+}
+
+.arrow-homes-left {
+    position: absolute;
+    left: -25px;
+    top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2 - 10px + var(--homes-img-height)/2) ;
+    z-index: 5;
+    transform: translateX(60%) rotate(180deg);
+}
+
+.arrow-homes-left .arrow-element {
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
 }
