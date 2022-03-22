@@ -28,16 +28,16 @@
 
 .arrow-homes {
     position: absolute;
-    right: 0;
-    top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2) ;
+    /*right: 0;*/
+    /*top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2) ;*/
     z-index: 5;
     transform: translateX(60%);
 }
 
 .arrow-homes-left {
     position: absolute;
-    left: -25px;
-    top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2 - 10px + var(--homes-img-height)/2) ;
+    /*left: -25px;*/
+    /*top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2 - 10px + var(--homes-img-height)/2) ;*/
     z-index: 5;
     transform: translateX(60%) rotate(180deg);
 }

@@ -181,10 +181,17 @@ a {
 
     .arrow-homes {
         right: 19px;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 363px)/2);
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 106px)/2);
         /*top: calc((var(--homes-img-height) - var(--homes-arrow-height)) / 2);*/
         transform: translateX(10%);
     }
+
+    .arrow-homes-left {
+        left: -25px;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 106px)/2);
+        transform: translateX(60%) rotate(180deg);
+    }
+
 
     .homes-item-title {
         margin-bottom: 4px;
@@ -833,14 +840,14 @@ a {
 
     .arrow-homes {
         right: 19px;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 363px)/2);
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 106px)/2);
         /*top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + 45px + 33px + 40px);*/
         transform: translateX(10%);
     }
 
     .arrow-homes-left {
         left: -25px;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2 - 10px + var(--homes-img-height)/2);
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 106px)/2);
         transform: translateX(60%) rotate(180deg);
     }
 
@@ -1492,14 +1499,14 @@ a {
 
     .arrow-homes {
         right: 19px;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 363px)/2);
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 261px)/2);
         /*top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + 80px + 40px + 80px);*/
         transform: translateX(0);
     }
 
     .arrow-homes-left {
         left: -25px;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2 - 10px + var(--homes-img-height)/2);
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 261px)/2);
         transform: translateX(60%) rotate(180deg);
     }
 
