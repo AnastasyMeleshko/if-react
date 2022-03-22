@@ -8,8 +8,9 @@ class SectionTitle extends React.Component {
         }
 
         render() {
+                const classes = `col-lg-12` + ` ` + `${this.props.title}`;
                 return (
-                    <h2 className={this.title} id={this.id}>{this.props.text}</h2>
+                    <h2 className={classes} id={this.id}>{this.props.text}</h2>
                 )
 }
 
