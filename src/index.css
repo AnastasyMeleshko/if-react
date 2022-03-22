@@ -180,8 +180,9 @@ a {
     }
 
     .arrow-homes {
-        right: 0;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height)) / 2);
+        right: 19px;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 363px)/2);
+        /*top: calc((var(--homes-img-height) - var(--homes-arrow-height)) / 2);*/
         transform: translateX(10%);
     }
 
@@ -831,14 +832,15 @@ a {
     }
 
     .arrow-homes {
-        right: 0;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + 45px + 33px + 40px);
+        right: 19px;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 363px)/2);
+        /*top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + 45px + 33px + 40px);*/
         transform: translateX(10%);
     }
 
     .arrow-homes-left {
         left: -25px;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (45px + 33px + 40px)/2 - 90px + var(--homes-img-height)/2);
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2 - 10px + var(--homes-img-height)/2);
         transform: translateX(60%) rotate(180deg);
     }
 
@@ -1489,14 +1491,15 @@ a {
     }
 
     .arrow-homes {
-        right: 0;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + 80px + 40px + 80px);
+        right: 19px;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 363px)/2);
+        /*top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + 80px + 40px + 80px);*/
         transform: translateX(0);
     }
 
     .arrow-homes-left {
         left: -25px;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (80px + 40px + 80px)/2 - 50px + var(--homes-img-height)/2);
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2 - 10px + var(--homes-img-height)/2);
         transform: translateX(60%) rotate(180deg);
     }
 
@@ -2114,13 +2117,16 @@ a {
     }
 
     .arrow-homes {
-        right: 0;
-        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + 105px + 47px + 120px);
+        right: 19px;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 363px)/2);
+        /*top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 39px + 120px));*/
+        /*top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2 - 10px + var(--homes-img-height)/2);*/
         transform: translateX(16%);
     }
 
     .arrow-homes-left {
         left: -25px;
+
         top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 120px)/2 - 10px + var(--homes-img-height)/2);
         transform: translateX(60%) rotate(180deg);
     }

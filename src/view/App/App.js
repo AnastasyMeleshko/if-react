@@ -4,7 +4,6 @@ import '../../fonts/Fonts.css';
 import '../../img/Sprite.svg';
 import HomesSection from "../HomesSection/HomesSection";
 
-
 function App() {
   return (
       <main className="main-sections-wrapper">
