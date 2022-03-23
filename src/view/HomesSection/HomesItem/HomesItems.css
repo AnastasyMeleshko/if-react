@@ -1,0 +1,133 @@
+.homes-item {
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all ease 0.1s;
+}
+
+.homes-item p {
+    align-self: flex-start;
+}
+
+.homes-item-img {
+    margin-bottom: 24px;
+    min-height: 300px;
+    width: 300px;
+}
+
+.homes-item-title {
+    margin-bottom: 24px;
+    color: #3077C6;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.homes-item-location {
+    font-weight: 400;
+    color: #BFBFBF;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .homes-item img {
+        height: 155px;
+        margin-bottom: 8px;
+    }
+
+    .homes-item p {
+        font-size: 12px;
+        line-height: 1.17em;
+    }
+
+    .homes-item-title {
+        margin-bottom: 4px;
+    }
+
+    .homes-item-three {
+        display: none;
+    }
+
+    .homes-item-four {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+    .homes-item img {
+        height: 155px;
+        margin-bottom: 8px;
+    }
+
+    .homes-item p {
+        font-size: 12px;
+        line-height: 1.17em;
+    }
+
+    .homes-item-title {
+        margin-bottom: 4px;
+    }
+
+    .homes-item-three {
+        display: none;
+    }
+
+    .homes-item-four {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .homes-item img {
+        height: 225px;
+        margin-bottom: 12px;
+    }
+
+    .homes-item p {
+        font-size: 18px;
+        line-height: 1.17em;
+    }
+
+    .homes-item-title {
+        margin-bottom: 10px;
+    }
+
+    .homes-item-three {
+        display: flex;
+    }
+
+    .homes-item-four  {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1210px) {
+    .homes-item img {
+        height: 300px;
+        margin-bottom: 24px;
+    }
+
+    .homes-item p {
+        font-size: 24px;
+        line-height: 1.17em;
+    }
+
+    .homes-item-title {
+        margin-bottom: 24px;
+    }
+
+    .homes-item-three {
+        display: flex;
+    }
+
+    .homes-item-four  {
+        display: flex;
+    }
+
+}

@@ -1,8 +1,6 @@
 .arrow-element {
     display: flex;
     background-color: #F3F3F4;
-    height: 40px;
-    width: 40px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -19,4 +17,34 @@
     stroke: #383838;
     stroke-width: 2;
     fill: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .arrow-element {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+    .arrow-element {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .arrow-element {
+        height: 34px;
+        width: 34px;
+    }
+
+}
+
+@media only screen and (min-width: 1210px) {
+    .arrow-element {
+        height: 40px;
+        width: 40px;
+    }
 }

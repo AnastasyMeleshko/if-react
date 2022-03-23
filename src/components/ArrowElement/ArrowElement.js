@@ -1,6 +1,6 @@
 import React from "react";
 import "./ArrowElement.css";
-import "../../img/Sprite.svg";
+import "../../assets/img/Sprite.svg";
 
 function ArrowElement() {
     return (

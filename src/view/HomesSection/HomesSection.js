@@ -1,7 +1,7 @@
 import React from "react";
 import "./HomesSection.css";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import HomesItem from "../../components/HomesItem/HomesItem";
+import HomesItem from "./HomesItem/HomesItem";
 import ArrowElement from "../../components/ArrowElement/ArrowElement";
 
 const data = [
@@ -68,7 +68,7 @@ class HomesSection extends React.Component {
         return (
             <section className="homes">
                 <div className="homes-container container col-lg-12">
-                    <SectionTitle text={'Homes guests loves'} id={'homes-guests'} title={'homes-title'}/>
+                    <SectionTitle text='Homes guests loves' id='homes-guests' title='homes-title'/>
                     <div className="homes-group-items col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div className="homes-group-items-slider col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             {data.map(element => <HomesItem key={element.id} item={element} />)}
