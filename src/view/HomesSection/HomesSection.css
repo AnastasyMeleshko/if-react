@@ -1,0 +1,102 @@
+:root {
+    --homes-img-height: 296px;
+    --homes-arrow-height: 40px;
+}
+
+.homes {
+    background-color: #EAF0F9;
+    display: flex;
+    flex-direction: column;
+    order: 3;
+}
+
+.homes-container {
+    position: relative;
+}
+
+.homes-group-items {
+    display: flex;
+    overflow: hidden;
+}
+
+.homes-group-items-slider {
+    display: flex;
+    justify-content: flex-start;
+    max-width: inherit;
+    transition: all ease 1s;
+}
+
+.arrow-homes {
+    position: absolute;
+    z-index: 5;
+    transform: translateX(60%);
+}
+
+.arrow-homes-left {
+    position: absolute;
+    z-index: 5;
+    transform: translateX(60%) rotate(180deg);
+}
+
+.arrow-homes-left .arrow-element {
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 480px) {
+    .arrow-homes {
+        right: 0;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 106px)/2);
+        transform: translateX(10%);
+    }
+
+    .arrow-homes-left {
+        left: -25px;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 106px)/2);
+        transform: translateX(60%) rotate(180deg);
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+    .arrow-homes {
+        right: 0;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 106px)/2);
+        transform: translateX(10%);
+    }
+
+    .arrow-homes-left {
+        left: -25px;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 106px)/2);
+        transform: translateX(60%) rotate(180deg);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .arrow-homes {
+        right: 0;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 261px)/2);
+        transform: translateX(0);
+    }
+
+    .arrow-homes-left {
+        left: -25px;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 261px)/2);
+        transform: translateX(60%) rotate(180deg);
+    }
+}
+
+@media only screen and (min-width: 1210px) {
+    .arrow-homes {
+        right: 0;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 336px)/2);
+        transform: translateX(16%);
+    }
+
+    .arrow-homes-left {
+        left: -25px;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2 + (105px + 47px + 336px)/2);
+        transform: translateX(60%) rotate(180deg);
+    }
+
+}
