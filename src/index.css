@@ -46,16 +46,6 @@ a {
     margin: 0 auto;
 }
 
-h1 {
-    margin-top: 200px;
-    color: #FFFFFF;
-    text-align: left;
-    font-size: 50px;
-    line-height: 60px;
-    font-style: normal;
-    font-weight: 500;
-}
-
 .form-main {
     margin-top: 145px;
     cursor: pointer;
@@ -278,22 +268,6 @@ h1 {
     color: #FFFFFF;
     transition: .5s;
     border: 3px solid #F5BD41;
-}
-
-.header-download-app {
-    display: flex;
-    justify-content: center;
-    margin: 120px auto 0;
-    padding-bottom: 120px;
-}
-
-.header-download-app a {
-    text-decoration: none;
-    margin-right: 16px;
-}
-
-.header-download-app a:last-child{
-    margin: 0;
 }
 
 .offers {
@@ -1652,18 +1626,6 @@ i {
         width: 100%;
     }
 
-    h1 {
-        margin-top: 40px;
-        margin-bottom: 64px;
-        font-size: 30px;
-        line-height: 1.2em;
-    }
-
-    .header-download-app {
-        margin: 32px auto 0;
-        padding-bottom: 0;
-    }
-
     .form-adults  > .label-adults {
         position: absolute;
         top: 25px;
@@ -2243,18 +2205,6 @@ i {
         width: 100%;
     }
 
-    h1 {
-        margin-top: 40px;
-        margin-bottom: 64px;
-        font-size: 30px;
-        line-height: 1.2em;
-    }
-
-    .header-download-app {
-        margin: 32px auto 0;
-        padding-bottom: 0;
-    }
-
     .form-adults  > .label-adults {
         position: absolute;
         top: 25px;
@@ -2828,17 +2778,6 @@ i {
         width: 100%;
     }
 
-    h1 {
-        margin-top: 80px;
-        font-size: 40px;
-        line-height: 1.2em;
-    }
-
-    .header-download-app {
-        margin: 80px auto 0;
-        padding-bottom: 40px;
-    }
-
     .form-adults  > .label-adults {
         position: absolute;
         top: 25px;
@@ -3331,17 +3270,6 @@ i {
         cursor: pointer;
         width: min(100%, 1224px);
         background-color: transparent;
-    }
-
-    h1 {
-        margin-top: 200px;
-        font-size: 50px;
-        line-height: 1.2em;
-    }
-
-    .header-download-app {
-        margin: 120px auto 0;
-        padding-bottom: 120px;
     }
 
     .form-adults  > .label-adults {
