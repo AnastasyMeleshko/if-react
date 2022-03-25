@@ -1,0 +1,11 @@
+.form-label {
+    font-size: 18px;
+    line-height: 21px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    transition: ease 0.3s;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+}

@@ -42,10 +42,6 @@
     transition: ease 0.3s;
 }
 
-.form-input:focus {
-    outline: none;
-}
-
 .form-loupe {
     fill: #BFBFBF;
     width: 16px;
@@ -89,33 +85,6 @@
     top: -50px;
     color: #FFFFFF;
 }
-
-.form-input {
-    padding: 22px 24px;
-    display: inline-flex;
-    justify-content: flex-start;
-    width: 100%;
-    color: #383838;
-    font-size: 18px;
-    line-height: 21px;
-    font-style: normal;
-    font-weight: 400;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.form-label {
-    font-size: 18px;
-    line-height: 21px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: center;
-    transition: ease 0.3s;
-    width: 100%;
-    cursor: pointer;
-    display: flex;
-}
-
 
 .form-dates {
     display: flex;
@@ -699,15 +668,6 @@ i {
         background-color: #F5BD41;
     }
 
-    .form-input {
-        color: #383838;
-        font-size: 15px;
-        line-height: 1.17em;
-        border: 3px solid #FFFFFF;
-        border-radius: 8px;
-        font-weight: 500;
-    }
-
     .input-adults {
         border-radius: 8px 0 0 8px;
     }
@@ -980,14 +940,6 @@ i {
         background-color: #F5BD41;
     }
 
-    .form-input {
-        color: #383838;
-        font-size: 15px;
-        line-height: 1.17em;
-        border: 3px solid #FFFFFF;
-        border-radius: 8px;
-        font-weight: 500;
-    }
 
     .input-adults {
         border-radius: 8px 0 0 8px;
@@ -1262,15 +1214,6 @@ i {
         background-color: #F5BD41;
     }
 
-    .form-input {
-        color: #383838;
-        font-size: 15px;
-        line-height: 1.17em;
-        border: 3px solid #FFFFFF;
-        border-radius: 8px;
-        font-weight: 500;
-    }
-
     .input-adults {
         border-radius: 8px 0 0 8px;
     }
@@ -1476,14 +1419,6 @@ i {
         background-color: transparent;
     }
 
-    .form-input {
-        color: #383838;
-        font-size: 18px;
-        line-height: 1.17em;
-        border-radius: 8px;
-        font-weight: 400;
-    }
-
     .input-adults {
         border-radius: 8px;
     }
@@ -1509,11 +1444,6 @@ i {
         top: 25px;
         left: 24px;
         max-width: 140px;
-    }
-
-    .form-input:focus {
-        border-color: #F5BD41;
-        outline: none;
     }
 
     .form-destination-hidden > input {
