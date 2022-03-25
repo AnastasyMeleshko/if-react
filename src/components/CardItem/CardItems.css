@@ -1,4 +1,4 @@
-.homes-item {
+.card-item {
     margin-right: 16px;
     display: flex;
     flex-direction: column;
@@ -6,17 +6,17 @@
     transition: all ease 0.1s;
 }
 
-.homes-item p {
+.card-item p {
     align-self: flex-start;
 }
 
-.homes-item-img {
+.card-item-img {
     margin-bottom: 24px;
     min-height: 300px;
     width: 300px;
 }
 
-.homes-item-title {
+.card-item-title {
     margin-bottom: 24px;
     color: #3077C6;
     font-weight: 400;
@@ -25,7 +25,7 @@
     line-height: 28px;
 }
 
-.homes-item-location {
+.card-item-location {
     font-weight: 400;
     color: #BFBFBF;
     font-size: 24px;
@@ -35,17 +35,17 @@
 
 
 @media only screen and (max-width: 480px) {
-    .homes-item img {
+    .card-item img {
         height: 155px;
         margin-bottom: 8px;
     }
 
-    .homes-item p {
+    .card-item p {
         font-size: 12px;
         line-height: 1.17em;
     }
 
-    .homes-item-title {
+    .card-item-title {
         margin-bottom: 4px;
     }
 
@@ -60,17 +60,17 @@
 
 
 @media only screen and (min-width: 480px) {
-    .homes-item img {
+    .card-item img {
         height: 155px;
         margin-bottom: 8px;
     }
 
-    .homes-item p {
+    .card-item p {
         font-size: 12px;
         line-height: 1.17em;
     }
 
-    .homes-item-title {
+    .card-item-title {
         margin-bottom: 4px;
     }
 
@@ -84,17 +84,17 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .homes-item img {
+    .card-item img {
         height: 225px;
         margin-bottom: 12px;
     }
 
-    .homes-item p {
+    .card-item p {
         font-size: 18px;
         line-height: 1.17em;
     }
 
-    .homes-item-title {
+    .card-item-title {
         margin-bottom: 10px;
     }
 
@@ -108,17 +108,17 @@
 }
 
 @media only screen and (min-width: 1210px) {
-    .homes-item img {
+    .card-item img {
         height: 300px;
         margin-bottom: 24px;
     }
 
-    .homes-item p {
+    .card-item p {
         font-size: 24px;
         line-height: 1.17em;
     }
 
-    .homes-item-title {
+    .card-item-title {
         margin-bottom: 24px;
     }
 
