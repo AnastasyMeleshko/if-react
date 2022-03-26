@@ -8,9 +8,10 @@ function FormInput(props) {
     const inputClass = `form-input` + ` ` + `${props.className}`;
     const offText = "off";
     const required = props.required;
+    const funcToHappen = props.onChange;
 
         return (
-            <input type={inputType} id={inputId} className={inputClass} name={inputName} key={inputId} autoComplete={offText} required={required}/>
+            <input onChange={funcToHappen} type={inputType} id={inputId} className={inputClass} name={inputName} key={inputId} autoComplete={offText} required={required}/>
         );
     }
 
