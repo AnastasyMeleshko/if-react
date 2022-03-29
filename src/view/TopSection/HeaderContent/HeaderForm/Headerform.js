@@ -1,39 +1,33 @@
-import React from "react";
+import React, { useState} from "react";
 import "./HeaderForm.css";
 import DestinationShownInput from "./DestinationShownInput/DestinationShownInput";
 import FiltersInForm from "./FiltersInForm/FiltersInForm";
 import OtherInputsContainer from "./OtherInputsContainer/OtherInputsContainer";
 
 
-class HeaderForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.state = {
+const useForm = () => {
+    const [values, setValues] = useState({
 
-        };
+    });
 
-    }
-
-    handleClick = () => {
-
-    }
-
-    handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
+        console.log(values);
     }
 
-    handleChange = (e) => {
-        this.setState({
+    const handleChange = (e) => {
+        setValues({
+            ...values,
             [e.target.name] : e.target.value,
-        })
+        });
 
         // destination inputs the same value update
 
         if (e.target.id === `user-destination`) {
             document.getElementById("user-destination-hidden").value = `${e.target.value}`;
-        } else {
+        }
+
+        if (e.target.id === `user-destination-hiddenon`) {
             document.getElementById("user-destination").value = `${e.target.value}`;
         }
 
@@ -53,22 +47,28 @@ class HeaderForm extends React.Component {
         const inputRooms = document.getElementById("form-user-rooms");
         inputRooms.value = `${roomsNumber}`;
 
+    };
 
-    }
+    return {
+        values,
+        handleSubmit,
+        handleChange,
+    };
+}
 
+const HeaderForm = () => {
 
-    render() {
-        const name = this.state;
-        console.log(this.state);
+    const { values, handleSubmit, handleChange } = useForm();
+    const name = values.name;
 
         return (
-            <form onSubmit={this.handleSubmit} action="" className="form-main col-lg-12">
-                <DestinationShownInput funcForChange={this.handleChange} value={name}/>
-                <OtherInputsContainer funcForChange={this.handleChange} value={name}/>
+            <form onSubmit={handleSubmit} action="" className="form-main col-lg-12">
+                <DestinationShownInput funcForChange={handleChange} value={name}/>
+                <OtherInputsContainer funcForChange={handleChange} value={name}/>
                 <FiltersInForm/>
             </form>
         );
-    }
+
 }
 
 export default HeaderForm;
