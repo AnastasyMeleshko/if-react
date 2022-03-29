@@ -78,9 +78,10 @@ class HomesSection extends React.Component {
             .then((res) => {
             return res.json();
         }).then((data) => {
-            this.setState({
-                data: data,
-            })
+            this.setState(prevState => ({
+                ...prevState,
+                data,
+            }));
         }).catch((e) => {
             console.log(e.message);
         })

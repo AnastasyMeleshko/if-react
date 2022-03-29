@@ -24,8 +24,6 @@ class HeaderForm extends React.Component {
         console.log(this.state)
     }
 
-
-
     handleChange = (e) => {
         this.setState({
             [e.target.name] : e.target.value,
