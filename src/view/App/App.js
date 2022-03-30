@@ -8,11 +8,12 @@ import TopSection from "../TopSection/TopSection";
 import AvailableSection from "../AvailableSection/Available";
 
 function App() {
+
   return (
       <>
           <TopSection/>
           <main className="main-sections-wrapper">
-              <AvailableSection />
+              <AvailableSection/>
               <HomesSection />
           </main>
       </>

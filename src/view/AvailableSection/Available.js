@@ -1,4 +1,6 @@
 import React from "react";
+// import PropTypes from "prop-types";
+
 import "./Available.css";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import CardItem from "../../components/CardItem/CardItem";
@@ -68,11 +70,11 @@ function AvailableSection() {
     const  data  = [...initialData];
 
     return (
-        <section className="homes">
-            <div className="homes-container container col-lg-12">
-                <SectionTitle text='Available hotels' id='homes-guests' title='homes-title'/>
-                <div className="homes-group-items col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div className="homes-group-items-slider col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <section className="available-hotels">
+            <div className="available-container container col-lg-12">
+                <SectionTitle text='Available hotels' title='available-title'/>
+                <div className="available-items col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div className="available-items-slider col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         {data.map(element =>
                             <CardItem key={element.id} item={element} useClass="card-item col-lg-3 col-md-4 col-sm-6 col-xs-6"/>
                         )}
@@ -87,6 +89,18 @@ function AvailableSection() {
             </div>
         </section>
     );
+
+    // AvailableSection.propTypes = {
+    //     data: PropTypes.arrayOf(PropTypes.shape({
+    //         id: PropTypes.string,
+    //         name: PropTypes.string,
+    //         city: PropTypes.string,
+    //         country: PropTypes.string,
+    //         imageUrl: PropTypes.string,
+    //     }))
+    // };
+
 }
 
 export default AvailableSection;
+
