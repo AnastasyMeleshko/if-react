@@ -1,18 +1,33 @@
 import React, { useState} from "react";
+// import PropTypes from "prop-types";
 import "./HeaderForm.css";
 import DestinationShownInput from "./DestinationShownInput/DestinationShownInput";
 import FiltersInForm from "./FiltersInForm/FiltersInForm";
 import OtherInputsContainer from "./OtherInputsContainer/OtherInputsContainer";
 
 
-const useForm = () => {
+const useForm = (setSearchValue) => {
     const [values, setValues] = useState({
 
     });
 
+    const section = document.querySelector( '#available-title' );
+    const availableItemsBlock = document.querySelector(".available-items-slider");
+
+    const handleScroll = () => {
+        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(values);
+        if (availableItemsBlock !== null) {
+            handleScroll();
+        }
+
+        if (availableItemsBlock === null) {
+            alert("Please check your search request");
+        }
+
     }
 
     const handleChange = (e) => {
@@ -21,13 +36,17 @@ const useForm = () => {
             [e.target.name] : e.target.value,
         });
 
+        if (e.target.name === `user-destination`) {
+            setSearchValue(e.target.value);
+        }
+
         // destination inputs the same value update
 
         if (e.target.id === `user-destination`) {
             document.getElementById("user-destination-hidden").value = `${e.target.value}`;
         }
 
-        if (e.target.id === `user-destination-hiddenon`) {
+        if (e.target.id === `user-destination-hidden`) {
             document.getElementById("user-destination").value = `${e.target.value}`;
         }
 
@@ -56,9 +75,9 @@ const useForm = () => {
     };
 }
 
-const HeaderForm = () => {
+const HeaderForm = ( {setSearchValue} ) => {
 
-    const { values, handleSubmit, handleChange } = useForm();
+    const { values, handleSubmit, handleChange } = useForm(setSearchValue);
     const name = values.name;
 
         return (
@@ -68,6 +87,10 @@ const HeaderForm = () => {
                 <FiltersInForm/>
             </form>
         );
+
+        // HeaderForm.propTypes = {
+        //     setSearchValue: PropTypes.func;
+        // }
 
 }
 

@@ -5,12 +5,14 @@ import HeaderTitle from "./HeaderTitle/HeaderTitle";
 import HeaderForm from "./HeaderForm/Headerform";
 import HeaderDownloads from "./HeaderDownloads/HeaderDownloads";
 
-class HeaderContent extends React.Component {
-    render() {
+function HeaderContent(props) {
+
+    const setSearchValue = props.setSearchValue;
+
         return (
             <div className="main-header-content">
                 <HeaderTitle/>
-                <HeaderForm/>
+                <HeaderForm setSearchValue={setSearchValue}/>
                 {/*<div className="date-picker">*/}
                 {/*    <div className="selected-date"></div>*/}
                 {/*    <div className="dates">*/}
@@ -38,7 +40,7 @@ class HeaderContent extends React.Component {
                 <HeaderDownloads/>
             </div>
         );
-    }
+
 }
 
 export default HeaderContent;

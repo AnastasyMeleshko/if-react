@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import './App.css';
 import '../../assets/fonts/Fonts.css';
@@ -7,13 +7,17 @@ import HomesSection from "../HomesSection/HomesSection";
 import TopSection from "../TopSection/TopSection";
 import AvailableSection from "../AvailableSection/Available";
 
+
+
 function App() {
+
+  const [searchValue, setSearchValue] = useState("");
 
   return (
       <>
-          <TopSection/>
+          <TopSection setSearchValue={setSearchValue}/>
           <main className="main-sections-wrapper">
-              <AvailableSection/>
+              <AvailableSection searchValue={searchValue}/>
               <HomesSection />
           </main>
       </>
