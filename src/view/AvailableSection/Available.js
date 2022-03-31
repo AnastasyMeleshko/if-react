@@ -102,8 +102,9 @@ const useFetch = (url) => {
 
 function AvailableSection( props ) {
 
-    const {data, loading} = useFetch(url);
     const searchValue = props.searchValue;
+    const {data, loading} = useFetch(`${url}?search=${searchValue}`);
+
     // const availableHotels = document.querySelector(".available-hotels");
 
     let showAvailable = false;
