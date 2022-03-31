@@ -117,9 +117,14 @@ function AvailableSection( props ) {
 
     }
 
-    if (getData(data).length !== 0) {
+    if (searchValue.length === 0) {
+        showAvailable  = false;
+    }
+    else if (getData(data).length !== 0) {
         showAvailable  = true;
-    } else {
+    }
+
+    else {
         showAvailable  = false;
     }
 
