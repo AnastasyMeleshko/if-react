@@ -1,0 +1,1523 @@
+.form-main {
+    margin-top: 145px;
+    cursor: pointer;
+    width: min(100%, 1224px);
+    position: relative;
+}
+
+.form-destination {
+    width: 100%;
+    height: 71px;
+    text-align: left;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 3px solid #F3F3F4;
+    position: relative;
+    display: flex;
+}
+
+.form-destination > input {
+    border-radius: 8px;
+    max-width: 375px;
+    max-height: 71px;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    cursor: pointer;
+}
+
+.form-destination > label {
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    display: flex;
+    max-width: 340px;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:valid + .form-label {
+    position: absolute;
+    top: -50px;
+    color: #FFFFFF;
+    transition: ease 0.3s;
+}
+
+.form-loupe {
+    fill: #BFBFBF;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.left-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 857px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.check-inn {
+    position: relative;
+}
+
+.label-inn {
+    position: absolute;
+    top: 25px;
+    left: 24px;
+    max-width: 140px;
+}
+
+.check-out {
+    position: relative;
+}
+
+.label-out {
+    position: absolute;
+    top: 25px;
+    left: 24px;
+    max-width: 140px;
+}
+
+.input-date:focus + .form-label {
+    position: absolute;
+    top: -50px;
+    color: #FFFFFF;
+}
+
+.form-dates {
+    display: flex;
+}
+
+.form-dates .form-item {
+    width: 50%;
+}
+
+.main-numbers-wrap {
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    width: 30%;
+    background-color: #FFFFFF;
+}
+
+.form-numbers-wrap {
+    width: 100%;
+}
+
+.form-numbers {
+    display: flex;
+    justify-content: center;
+    color: #383838;
+    font-size: 18px;
+    line-height: 21px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    background-color: #FFFFFF;
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+.form-numbers-item {
+    width: 33.3333%;
+}
+
+.form-adults  > .label-adults {
+    position: absolute;
+    top: 25px;
+    left: 34px;
+}
+
+.label-adults {
+    max-width: 80px;
+}
+
+.form-children {
+    position: relative;
+}
+
+.form-children  > .label-children {
+    position: absolute;
+    top: 25px;
+    left: 24px;
+}
+
+.label-children {
+    max-width: 80px;
+}
+
+.form-rooms {
+    position: relative;
+}
+
+
+.form-rooms  > .label-rooms {
+    position: absolute;
+    top: 25px;
+    left: 31px;
+}
+
+.label-rooms {
+    max-width: 80px;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    background-color: #3077C6;
+    border: 3px solid #3077C6;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 20px 57px;
+    cursor: pointer;
+    width: 100%;
+    max-height: 72px;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-button:hover {
+    background-color: #3077C6;
+    color: #FFFFFF;
+    transition: .5s;
+    border: 3px solid #F5BD41;
+}
+
+/* Styles for JS */
+
+.hidden {
+    display: none;
+}
+
+.form-numbers-big-screen {
+    display: flex;
+    width: 327px;
+    border: 3px solid var(--borderNumbersColor);
+    border-radius: 8px;
+    position: relative;
+}
+
+
+.form-input-bg {
+    padding: 22px 0;
+    display: inline-flex;
+    justify-content: center;
+    color: #383838;
+    font-size: 18px;
+    line-height: 21px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 33.33333%;
+    position: relative;
+    height: 65px;
+}
+
+.first-line {
+    width: 12px;
+    height: 1px;
+    background-color: #383838;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 31%;
+}
+
+.second-line {
+    width: 12px;
+    height: 1px;
+    background-color: #383838;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 211px;
+}
+
+.form-label-bg {
+    font-size: 18px;
+    line-height: 21px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    transition: ease 0.3s;
+    max-width: 100%;
+    cursor: pointer;
+    display: flex;
+    position:absolute;
+}
+
+.filters-in-form {
+    display: none;
+    width: 250px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    position: absolute;
+    top: 85px;
+    right: 197px;
+    padding: 15px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: auto;
+    max-height: 240px;
+}
+
+.add-scroll {
+    overflow-y: scroll;
+}
+
+.filters-block-element {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 40px;
+    width: 100%;
+}
+
+.filters-block-element:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.filters-block-element:last-child {
+    margin-bottom: 35px;
+}
+
+.filter-text {
+    font-size: 16px;
+    line-height: 19px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    display: inline-flex;
+}
+
+.square-button {
+    width: 30px;
+    height: 30px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.square-button-minus {
+    margin-left: auto;
+    margin-right:20px;
+    border: 1px solid var(--btn-minus-color);
+}
+
+.square-button-plus {
+    border: 1px solid var(--btn-plus-color);
+    margin-left: 20px;
+}
+
+.minus-in-btn {
+    display: flex;
+    width: 8px;
+    height: 1px;
+    margin: 0 auto;
+}
+
+.minus-minus-in-btn {
+    background-color: var(--btn-minus-color);
+}
+
+.minus-in-btn-vertical {
+    display: flex;
+    width: 8px;
+    height: 1px;
+    margin: 0 auto;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 4px);
+}
+
+.minus-in-btn-plus {
+    background-color: var(--btn-plus-color);
+}
+
+.counter-number {
+    font-size: 16px;
+    line-height: 19px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    width: 20px;
+}
+
+.text-about-children {
+    font-size: 12px;
+    line-height: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    display: none;
+    margin-bottom: 12px;
+}
+
+.select-age-wrap {
+    display: none;
+    position: relative;
+    height: 100%;
+}
+
+.selector-age {
+    font-size: 12px;
+    line-height: 14px;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-flex;
+    border: 1px solid #3077C6;
+    border-radius: 0;
+    padding: 8px;
+    appearance: none;
+    outline: none;
+    position: relative;
+    width: 100px;
+}
+
+.selector-age > option {
+    border-radius: 0;
+}
+
+i {
+    border: solid #3077C6;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.arrow-down {
+    transform: rotate(45deg);
+}
+
+.arrow {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 80px;
+}
+
+.text-for-input {
+    font-size: 15px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: 500;
+    display: none;
+    color: var(--text-for-input-numbers);
+    position: relative;
+    top: -25px;
+    left: 25px;
+}
+
+.form-adults > .text-for-input {
+    left: 8px;
+}
+
+.shown {
+    display: flex;
+}
+
+.shadow-block {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: 500;
+
+}
+
+.inform-block {
+    width: 50%;
+    height: 28%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    color: #000000;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.confirm-btn {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #3077C6;
+    border: 3px solid #3077C6;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 12px 57px;
+    cursor: pointer;
+    width: 20%;
+    max-height: 72px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 50px;
+}
+
+
+@media only screen and (max-width: 480px) {
+    /* For extra small devices (xs) 0-480px */
+    .col-xs-1 {width: calc(100% / var(--column-count) * 1);}
+    .col-xs-2 {width: calc(100% / var(--column-count) * 2);}
+    .col-xs-3 {width: calc(100% / var(--column-count) * 3);}
+    .col-xs-4 {width: calc(100% / var(--column-count) * 4);}
+    .col-xs-5 {width: calc(100% / var(--column-count) * 5);}
+    .col-xs-6 {width: calc(100% / var(--column-count) * 6);}
+    .col-xs-7 {width: calc(100% / var(--column-count) * 7);}
+    .col-xs-8 {width: calc(100% / var(--column-count) * 8);}
+    .col-xs-9 {width: calc(100% / var(--column-count) * 9);}
+    .col-xs-10 {width: calc(100% / var(--column-count) * 10);}
+    .col-xs-11 {width: calc(100% / var(--column-count) * 11);}
+    .col-xs-12 {width: calc(100% / var(--column-count) * 12);}
+
+    .form-loupe {
+        display: inline-flex;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 64px;
+        position: static;
+    }
+
+    .form-destination-hidden {
+        width: 100%;
+        position: relative;
+        padding: 8px 8px 4px 8px;
+        background-color: #F5BD41;
+        border-top-right-radius: 8px 8px;
+        border-top-left-radius: 8px 8px;
+    }
+
+    .form-destination-shown  {
+        display: none;
+
+    }
+
+    .form-destination {
+        display: none;
+    }
+
+    .left-container {
+        display: inline-flex;
+        justify-content: flex-end;
+        max-width: 100%;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form-main {
+        margin-top: 32px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .form-numbers {
+        width: 100%;
+        padding: 0 8px 0;
+        background-color: #FFFFFF;
+        height: 100%;
+    }
+
+    .main-numbers-wrap {
+        background-color: #F5BD41;
+        padding: 0 8px 0;
+        width: 100%;
+        max-height: 67px;
+
+    }
+
+    .form-numbers-wrap {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        max-height: 100%;
+    }
+
+    .input-adults, .input-children, .input-rooms {
+        height: 50px;
+        padding: 5px 24px;
+    }
+
+    .form-numbers-item {
+        max-height: 100%;
+    }
+
+    .form-dates {
+        width: 100%;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 16px;
+    }
+
+    .form-rooms {
+        position: relative;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 26px;
+    }
+
+    .form-children {
+        position: relative;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .input-date:focus ~ .form-label,
+    .input-date:valid + .form-label {
+        position: absolute;
+        top: 5px;
+        color: #383838;
+        transition: all ease 0.3s;
+    }
+
+    .numbers-input:focus ~ .form-label,
+    .numbers-input:valid + .form-label {
+        position: absolute;
+        top: -5px;
+        color: #383838;
+        transition: all ease 0.3s;
+    }
+
+    .input-destination:focus ~ .label-destination-hidden,
+    .input-destination:valid + .label-destination-hidden {
+        position: absolute;
+        top: 14px;
+        color: #383838;
+        transform: translateY(-3px);
+        transition: transform ease 0.3s;
+    }
+
+    .label-destination-hidden {
+        position: absolute;
+        bottom: 25px;
+        left: 55px;
+        max-width: 300px;
+        transition: ease 0.3s;
+    }
+
+    .form-destination-hidden > input {
+        padding-left: 45px;
+    }
+
+    .search-button-wrap {
+        padding: 8px;
+        background-color: #F5BD41;
+        border-bottom-right-radius: 8px 8px;
+        border-bottom-left-radius: 8px 8px;
+    }
+
+    .check-inn {
+        padding: 4px 4px 8px 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-out {
+        padding: 4px 8px 8px 4px;
+        background-color: #F5BD41;
+    }
+
+    .input-adults {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-children {
+        border-radius: 0;
+        border-right: 2px solid #BFBFBF;
+        border-left: 2px solid #BFBFBF;
+    }
+
+    .input-rooms {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+        max-width: 140px;
+    }
+
+    .form-img-loupe {
+        position: absolute;
+        top: 36px;
+        left: 32px;
+    }
+
+    .form-numbers-big-screen {
+        width: 100%;
+        height: 100%;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    .form-numbers {
+        position: relative;
+        display: flex;
+    }
+
+    .filters-in-form {
+        top: -40%;
+        right: 50%;
+        transform: translateX(50%);
+        border: 2px solid #10367C;
+    }
+
+    .date-picker {
+        top: -525px;
+        left: 12px;
+        width: 85%;
+    }
+
+    .date-picker .dates.active {
+        flex-wrap: wrap;
+        border: 2px solid #10367C;
+        justify-content: space-around;
+    }
+
+    .months-first, .months-second {
+        width: 50%;
+    }
+
+    .dates-buttons {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .dates-buttons .check-in-btn, .dates-buttons .check-out-btn  {
+        width: 155px;
+    }
+    .dates-buttons > button {
+        margin: 10px 0;
+    }
+
+    .dates-buttons button:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .months-second, .months-first {
+        width: 45%;
+    }
+
+}
+
+@media only screen and (min-width: 480px) {
+    /* For small devices (sm) 480px-768px */
+    .col-sm-1 {width: calc(100% / var(--column-count) * 1);}
+    .col-sm-2 {width: calc(100% / var(--column-count) * 2);}
+    .col-sm-3 {width: calc(100% / var(--column-count) * 3);}
+    .col-sm-4 {width: calc(100% / var(--column-count) * 4);}
+    .col-sm-5 {width: calc(100% / var(--column-count) * 5);}
+    .col-sm-6 {width: calc(100% / var(--column-count) * 6);}
+    .col-sm-7 {width: calc(100% / var(--column-count) * 7);}
+    .col-sm-8 {width: calc(100% / var(--column-count) * 8);}
+    .col-sm-9 {width: calc(100% / var(--column-count) * 9);}
+    .col-sm-10 {width: calc(100% / var(--column-count) * 10);}
+    .col-sm-11 {width: calc(100% / var(--column-count) * 11);}
+    .col-sm-12 {width: calc(100% / var(--column-count) * 12);}
+
+    .form-loupe {
+        display: inline-flex;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 64px;
+        position: static;
+    }
+
+    .form-destination-hidden {
+        width: 100%;
+        position: relative;
+        padding: 8px 8px 4px 8px;
+        background-color: #F5BD41;
+        border-top-right-radius: 8px 8px;
+        border-top-left-radius: 8px 8px;
+    }
+
+    .form-destination-shown  {
+        display: none;
+    }
+
+    .form-destination {
+        display: none;
+    }
+
+    .left-container {
+        display: inline-flex;
+        justify-content: flex-end;
+        max-width: 100%;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form-main {
+        margin-top: 32px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .main-numbers-wrap {
+        background-color: #F5BD41;
+        padding: 0 8px 0;
+        width: 100%;
+        max-height: 67px;
+
+    }
+
+    .form-numbers-wrap {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        max-height: 100%;
+    }
+
+    .form-numbers {
+        background-color: #FFFFFF;
+        height: 100%;
+        padding: 0 8px 0;
+        width: 100%;
+    }
+
+    .input-adults, .input-children, .input-rooms {
+        height: 50px;
+        padding: 5px 24px;
+    }
+
+    .form-numbers-item {
+        max-height: 100%;
+    }
+
+    .form-dates {
+        width: 100%;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 16px;
+    }
+
+    .form-rooms {
+        position: relative;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 26px;
+    }
+
+    .form-children {
+        position: relative;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .input-date:focus ~ .form-label,
+    .input-date:valid + .form-label {
+        position: absolute;
+        top: 5px;
+        color: #383838;
+        transition: all ease 0.3s;
+    }
+
+    .numbers-input:focus ~ .form-label,
+    .numbers-input:valid + .form-label {
+        position: absolute;
+        top: -5px;
+        color: #383838;
+        transition: all ease 0.3s;
+    }
+
+    .input-destination:focus ~ .label-destination-hidden,
+    .input-destination:valid + .label-destination-hidden {
+        position: absolute;
+        top: 14px;
+        color: #383838;
+        transform: translateY(-3px);
+        transition: transform ease 0.3s;
+    }
+
+    .label-destination-hidden {
+        position: absolute;
+        bottom: 25px;
+        left: 55px;
+        max-width: 550px;
+        transition: all ease 0.3s;
+    }
+
+    .form-destination-hidden > input {
+        padding-left: 45px;
+    }
+
+    .search-button-wrap {
+        padding: 8px;
+        background-color: #F5BD41;
+        border-bottom-right-radius: 8px 8px;
+        border-bottom-left-radius: 8px 8px;
+    }
+
+    .check-inn {
+        padding: 4px 4px 8px 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-out {
+        padding: 4px 8px 8px 4px;
+        background-color: #F5BD41;
+    }
+
+
+    .input-adults {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-children {
+        border-radius: 0;
+        border-right: 2px solid #BFBFBF;
+        border-left: 2px solid #BFBFBF;
+    }
+
+    .input-rooms {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+        max-width: 140px;
+    }
+
+    .form-img-loupe {
+        position: absolute;
+        top: 36px;
+        left: 32px;
+    }
+
+    .form-numbers-big-screen {
+        width: 100%;
+        height: 100%;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    .form-numbers {
+        position: relative;
+        display: flex;
+    }
+
+    .filters-in-form {
+        top: -40%;
+        right: 50%;
+        transform: translateX(50%);
+        border: 2px solid #10367C;
+    }
+
+    .date-picker {
+        top: -525px;
+        left: 12px;
+        width: 85%;
+    }
+
+    .date-picker .dates.active {
+        flex-wrap: wrap;
+        border: 2px solid #10367C;
+        justify-content: space-around;
+    }
+
+    .months-first, .months-second {
+        width: 50%;
+    }
+
+    .dates-buttons {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .dates-buttons .check-in-btn, .dates-buttons .check-out-btn  {
+        width: 155px;
+    }
+    .dates-buttons > button {
+        margin: 10px 0;
+    }
+
+    .dates-buttons button:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .months-second, .months-first {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For medium devices (md) 768px-1210px */
+    .col-md-1 {width: calc(100% / var(--column-count) * 1);}
+    .col-md-2 {width: calc(100% / var(--column-count) * 2);}
+    .col-md-3 {width: calc(100% / var(--column-count) * 3);}
+    .col-md-4 {width: calc(100% / var(--column-count) * 4);}
+    .col-md-5 {width: calc(100% / var(--column-count) * 5);}
+    .col-md-6 {width: calc(100% / var(--column-count) * 6);}
+    .col-md-7 {width: calc(100% / var(--column-count) * 7);}
+    .col-md-8 {width: calc(100% / var(--column-count) * 8);}
+    .col-md-9 {width: calc(100% / var(--column-count) * 9);}
+    .col-md-10 {width: calc(100% / var(--column-count) * 10);}
+    .col-md-11 {width: calc(100% / var(--column-count) * 11);}
+    .col-md-12 {width: calc(100% / var(--column-count) * 12);}
+
+    .form-loupe {
+        display: inline-flex;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    .form-destination-hidden {
+        width: 100%;
+        position: relative;
+        padding: 16px 16px 4px 16px;
+        background-color: #F5BD41;
+        border-top-right-radius: 8px 8px;
+        border-top-left-radius: 8px 8px;
+    }
+
+    .form-destination-hidden > input {
+        padding-left: 49px;
+    }
+
+    .label-destination-hidden {
+        display: flex;
+    }
+
+    .form-img-loupe {
+        position: absolute;
+        top: 41px;
+        left: 40px;
+    }
+
+    .form-destination-shown  {
+        display: none;
+    }
+
+    .left-container {
+        display: inline-flex;
+        justify-content: flex-end;
+        max-width: 857px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form-main {
+        margin-top: 100px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .main-numbers-wrap {
+        background-color: #F5BD41;
+        padding: 0 16px 0;
+        width: 100%;
+        max-height: 67px;
+
+    }
+
+    .form-numbers-wrap {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        max-height: 100%;
+    }
+
+    .form-numbers {
+        background-color: #FFFFFF;
+        height: 100%;
+    }
+
+    .input-adults, .input-children, .input-rooms {
+        height: 50px;
+        padding: 5px 24px;
+    }
+
+    .form-numbers-item {
+        max-height: 100%;
+    }
+
+    .form-dates {
+        width: 100%;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 16px;
+    }
+
+    .form-rooms {
+        position: relative;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 26px;
+    }
+
+    .form-children {
+        position: relative;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .input-date:focus ~ .form-label,
+    .input-date:valid + .form-label {
+        position: absolute;
+        top: 3px;
+        color: #383838;
+        transition: all ease 0.3s;
+    }
+
+    .numbers-input:focus ~ .form-label,
+    .numbers-input:valid + .form-label {
+        position: absolute;
+        top: -7px;
+        color: #383838;
+        transition: all ease 0.3s;
+    }
+
+    .input-destination:focus ~ .label-destination-hidden,
+    .input-destination:valid + .label-destination-hidden {
+        position: absolute;
+        top: 21px;
+        color: #383838;
+        transform: translateY(-3px);
+        transition: transform ease 0.3s;
+    }
+
+    .label-destination-hidden {
+        position: absolute;
+        bottom: 27px;
+        left: 67px;
+        transition: all ease 0.3s;
+        max-width: 600px;
+    }
+
+    .search-button-wrap {
+        padding: 8px 16px 16px 16px;
+        background-color: #F5BD41;
+        border-bottom-right-radius: 8px 8px;
+        border-bottom-left-radius: 8px 8px;
+    }
+
+    .check-inn {
+        padding: 4px 4px 8px 16px;
+        background-color: #F5BD41;
+    }
+
+    .check-out {
+        padding: 4px 16px 8px 4px;
+        background-color: #F5BD41;
+    }
+
+    .input-adults {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-children {
+        border-radius: 0;
+        border-right: 2px solid #BFBFBF;
+        border-left: 2px solid #BFBFBF;
+    }
+
+    .input-rooms {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 42px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+        max-width: 140px;
+    }
+
+    .form-numbers-big-screen {
+        width: 100%;
+        height: 100%;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    .form-numbers {
+        position: relative;
+        display: flex;
+    }
+
+    .filters-in-form {
+        top: -40%;
+        right: 50%;
+        transform: translateX(50%);
+        border: 2px solid #10367C;
+    }
+
+    .date-picker {
+        top: -525px;
+        left: 12px;
+        width: 100%;
+    }
+
+    .date-picker .dates.active {
+        border: 2px solid #10367C;
+        flex-wrap: nowrap;
+    }
+
+    .dates-buttons {
+        flex-direction: column;
+        max-width: 24%;
+        margin: 0 auto;
+    }
+
+    .dates-buttons button:not(:last-child) {
+        margin-right: 0;
+    }
+
+
+    .dates-buttons .check-in-btn, .dates-buttons .check-out-btn  {
+        width: 110px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1210px) {
+    /* For large devices (lg) 1210px - and > */
+    .col-lg-1 {width: calc(100% / var(--column-count) * 1);}
+    .col-lg-2 {width: calc(100% / var(--column-count) * 2);}
+    .col-lg-3 {width: calc(100% / var(--column-count) * 3);}
+    .col-lg-4 {width: calc(100% / var(--column-count) * 4);}
+    .col-lg-5 {width: calc(100% / var(--column-count) * 5);}
+    .col-lg-6 {width: calc(100% / var(--column-count) * 6);}
+    .col-lg-7 {width: calc(100% / var(--column-count) * 7);}
+    .col-lg-8 {width: calc(100% / var(--column-count) * 8);}
+    .col-lg-9 {width: calc(100% / var(--column-count) * 9);}
+    .col-lg-10 {width: calc(100% / var(--column-count) * 10);}
+    .col-lg-11 {width: calc(100% / var(--column-count) * 11);}
+    .col-lg-12 {width: calc(100% / var(--column-count) * 12);}
+
+    .form-loupe {
+        display: none;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    .form-destination-hidden {
+        display: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .form-destination-shown  {
+        display: flex;
+        position: relative;
+    }
+
+    .form-destination {
+        max-width: 100%;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 849px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .form-dates {
+        margin: 0;
+    }
+
+    .form-numbers {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .search-button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .form-main {
+        margin-top: 145px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+    }
+
+    .input-date:focus + .form-label {
+        position: absolute;
+        top: -50px;
+        color: #FFFFFF;
+    }
+
+    .form-rooms {
+        position: relative;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+    }
+
+    .form-children {
+        position: relative;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 24px;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:valid + .form-label {
+        position: absolute;
+        top: -50px;
+        color: #FFFFFF;
+        transition: ease 0.3s;
+    }
+
+    .search-button-wrap {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .check-inn {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .check-out {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .input-adults {
+        border-radius: 8px;
+    }
+
+    .input-children {
+        border-radius: 8px;
+        border: 3px solid transparent;
+    }
+
+    .input-rooms {
+        border-radius: 8px;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 24px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 24px;
+        max-width: 140px;
+    }
+
+    .form-destination-hidden > input {
+        padding-left: 0;
+    }
+
+    .main-numbers-wrap {
+        background-color: #FFFFFF;
+        padding: 0;
+        width: 100%;
+        max-height: 72px;
+    }
+
+    .form-numbers-wrap {
+        width: 100%;
+        padding: 0;
+        border-radius: 8px;
+
+    }
+
+    .input-adults, .input-children, .input-rooms {
+        height: 71px;
+        padding: 22px 24px;
+    }
+
+    .form-numbers {
+        position: relative;
+        display: none;
+    }
+
+    .form-numbers-big-screen {
+        width: 327px;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .filters-in-form {
+        top: 85px;
+        right: 197px;
+        border: 0;
+        transform: translateX(0);
+    }
+
+    .date-picker {
+        top: -15px;
+        left: 80px;
+        width: 100%;
+    }
+
+    .date-picker .dates.active {
+        border: 2px solid transparent;
+        flex-wrap: nowrap;
+    }
+
+    .dates-buttons {
+        flex-direction: column;
+        max-width: 24%;
+        margin: 0 auto;
+    }
+
+    .dates-buttons button:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .check-in-btn, .check-out-btn {
+        width: 100%;
+    }
+
+    .dates-buttons .check-in-btn, .dates-buttons .check-out-btn  {
+        width: 110px;
+    }
+
+    .best-items-wrap, .best-items-slider {
+        flex-wrap: wrap;
+    }
+
+}

@@ -1,0 +1,21 @@
+.available-hotels {
+    background-color: #EAF0F9;
+}
+
+.available-container {
+    position: relative;
+}
+
+.available-items {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.available-items-slider {
+    display: flex;
+    justify-content: flex-start;
+    max-width: inherit;
+    transition: all ease 1s;
+}

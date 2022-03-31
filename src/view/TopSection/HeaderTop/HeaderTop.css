@@ -1,0 +1,9 @@
+.header-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-block a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
