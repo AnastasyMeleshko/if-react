@@ -6,6 +6,7 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import CardItem from "../../components/CardItem/CardItem";
 import ArrowElement from "../../components/ArrowElement/ArrowElement";
 
+
 // const initialData = [
 //     {
 //         id: '71ce9eac-e9b9-44f0-a342-9ff0b565f3b7',
@@ -127,6 +128,7 @@ function AvailableSection( props ) {
     else {
         showAvailable  = false;
     }
+
 
     return  showAvailable  ? loading ? (<p>Loading...</p>) :
 

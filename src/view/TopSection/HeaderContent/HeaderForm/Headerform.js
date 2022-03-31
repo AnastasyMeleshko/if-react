@@ -5,7 +5,6 @@ import DestinationShownInput from "./DestinationShownInput/DestinationShownInput
 import FiltersInForm from "./FiltersInForm/FiltersInForm";
 import OtherInputsContainer from "./OtherInputsContainer/OtherInputsContainer";
 
-
 const useForm = (setSearchValue) => {
     const [values, setValues] = useState({
 
@@ -20,6 +19,7 @@ const useForm = (setSearchValue) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         if (availableItemsBlock !== null) {
             handleScroll();
         }
