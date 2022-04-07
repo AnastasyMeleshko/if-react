@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from "react";
+// import {useNavigate} from "react-router-dom";
+
 // import PropTypes from "prop-types";
 
 import "./Available.css";
@@ -105,7 +107,7 @@ function AvailableSection( props ) {
     const searchValue = props.searchValue;
     const {data, loading} = useFetch(`${url}?search=${searchValue}`);
 
-    // const availableHotels = document.querySelector(".available-hotels");
+    // const navigate = useNavigate();
 
     let showAvailable = false;
 
@@ -130,6 +132,13 @@ function AvailableSection( props ) {
         showAvailable  = false;
     }
 
+    // const handleClick = (props) => {
+    //     console.log(props.element)
+    //     // console.log(e.target)
+    //     // const itemId = ;
+    //     // navigate(`/:${itemId}`);
+    // }
+
 
     return  showAvailable  ? loading ? (<p>Loading...</p>) :
 
@@ -140,7 +149,7 @@ function AvailableSection( props ) {
                 <div className="available-items col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div className="available-items-slider col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         {getData(data).map(element =>
-                            <CardItem key={element.id} item={element} useClass="card-item col-lg-3 col-md-4 col-sm-6 col-xs-6"/>
+                            <CardItem  key={element.id} id={element.id} item={element} useClass="available-item card-item col-lg-3 col-md-4 col-sm-6 col-xs-6"/>
                         )}
                     </div>
                     <div className="arrow-homes-left">

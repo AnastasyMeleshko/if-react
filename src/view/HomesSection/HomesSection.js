@@ -98,7 +98,7 @@ class HomesSection extends React.Component {
                     <SectionTitle text='Homes guests loves' id='homes-guests' title='homes-title'/>
                     <div className="homes-group-items col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div className="homes-group-items-slider col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            {data.map(element => <CardItem key={element.id} item={element} useClass="card-item col-lg-3 col-md-4 col-sm-6 col-xs-6"/>)}
+                            {data.map(element => <CardItem key={element.id} item={element} useClass="homes-item card-item col-lg-3 col-md-4 col-sm-6 col-xs-6"/>)}
                         </div>
                         <div className="arrow-homes-left">
                             <ArrowElement id="arrow-homes-left" key={this.id}/>
