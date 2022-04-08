@@ -9,30 +9,13 @@ import OtherInputsContainer from "./OtherInputsContainer/OtherInputsContainer";
 const useForm = (setSearchValue) => {
 
     const navigate = useNavigate();
-
     const [values, setValues] = useState({
 
     });
 
-
-    // const availableItemsBlock = document.querySelector(".available-items-slider");
-
-    const handleScroll = (section) => {
-        if ((section !== null) && (section.innerHTML !== "")) {
-            section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
-        }
-        // else {
-        //     alert("Please check your search request");
-        // }
-
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate("/hotels");
-        const section = document.querySelector( '.available-items-slider' );
-        handleScroll(section);
-
     }
 
     const handleChange = (e) => {

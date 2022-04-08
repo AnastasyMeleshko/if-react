@@ -19,15 +19,14 @@ function App() {
       <Router>
           <>
               <TopSection setSearchValue={setSearchValue}/>
-              <main className="main-sections-wrapper">
-                  <Routes>
-                          <Route path="/hotels" element={<AvailableSection searchValue={searchValue}/>}/>
-                          <Route path="/hotels:id" element={<HotelCard/>}/>
-                          <Route path="/" element={<HomesSection/>}/>
-                  </Routes>
-              </main>
+                  <main className="main-sections-wrapper">
+                      <Routes>
+                              <Route path="/hotels" element={<AvailableSection searchValue={searchValue}/>}/>
+                              <Route path="/hotels:id" element={<HotelCard/>}/>
+                              <Route path="/" element={<HomesSection/>}/>
+                      </Routes>
+                  </main>
               <Footer/>
-              {/*<Footer/>*/}
           </>
       </Router>
   );

@@ -4,9 +4,7 @@ import './CardItems.css';
 
 function CardItem(element) {
 
-    const navigate = useNavigate();
-    // const { hotelId } = useParams();
-    // const availableHotels = document.querySelector(".available-items-slider");
+  const navigate = useNavigate();
 
   const handleClick = (e) => {
       if (e.target.closest(".available-item")) {

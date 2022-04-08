@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import {useParams} from "react-router-dom";
+import {useParams, useNavigate } from "react-router-dom";
 import "./HotelCard.css";
-// import {element} from "prop-types";
+import ButtonItem from "../../../components/ButtonItem/ButtonItem";
 
 const urlForHotel = `https://fe-student-api.herokuapp.com/api/hotels`;
 
@@ -44,13 +44,32 @@ function HotelCard()  {
 
     const {hotelData, loading} = useFetch(`${urlForHotel}/${hotelId}`);
 
+    const navigate = useNavigate();
+
+    const handleMainClick = () => {
+        navigate("/");
+    }
+
+    const handleAvailableClick = () => {
+        navigate(-1);
+    }
+
     return  loading ? (<p>Loading...</p>) :
         (
-            <div className="hotel-card container">
-                <img className="card-item-img" src={hotelData.imageUrl} alt={hotelData.name}/>
-                <p className="card-item-title">{hotelData.name}</p>
-                <p className="card-item-location">{hotelData.city}, {hotelData.country}</p>
-            </div>
+            <>
+                <div className="container">
+                    <div className="hotel-card">
+                        <img className="card-item-img search-img" src={hotelData.imageUrl} alt={hotelData.name}/>
+                        <p className="card-item-title">{hotelData.name}</p>
+                        <p className="card-item-location">{hotelData.city}, {hotelData.country}</p>
+                    </div>
+                    <div className="back-buttons">
+                        <ButtonItem onClick={handleMainClick} className="back-btn" btnText="Back home page" type="button"/>
+                        <ButtonItem onClick={handleAvailableClick} className="back-btn" btnText="Back to hotels" type="button"/>
+                    </div>
+                </div>
+            </>
+
         )
 }
 
