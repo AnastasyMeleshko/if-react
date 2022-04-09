@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
+
 import 'antd/dist/antd.css';
 import "./OtherInputsContainer.css";
 
@@ -10,6 +11,8 @@ import moment from "moment";
 const {RangePicker} = DatePicker;
 
 function OtherInputsContainer(props) {
+    const [value, setValue] = useState("");
+    const [dateString, setDateString] = useState("");
 
     const funcForChange = props.funcForChange;
     const name = props.name;
@@ -17,13 +20,24 @@ function OtherInputsContainer(props) {
     const date = new Date();
     const today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
+    const handleChange = (valueChanged,dateStringChanged) => {
+        setValue({
+            ...value,
+            [value] : valueChanged,
+        });
+        setDateString({
+            ...dateString,
+            [dateString] : dateStringChanged,
+        });
+    }
+    console.log(value, dateString)
     return (
         <div className="left-container">
             <DestinationHiddenInput funcForChange={props.funcForChange} value={props.name}/>
             <div className="form-dates">
                 <RangePicker format="ddd DD MMM" bordered={false} disabledDate={current => {
                     return current < today && current < moment().endOf("day") && current;
-                }}>
+                }} onChange={handleChange}>
                     <div className="form-item check-inn">
                         <input onChange={funcForChange} value={name} type="text" className="form-input input-date" name="user-check-in-date"
                                id="form-user-check-in" required autoComplete="off"/>
