@@ -286,10 +286,6 @@
     margin-bottom: 10px;
 }
 
-.filters-block-element:last-child {
-    margin-bottom: 35px;
-}
-
 .filter-text {
     font-size: 16px;
     line-height: 19px;
@@ -364,8 +360,9 @@
     font-style: normal;
     font-weight: 400;
     text-align: left;
-    display: none;
+    display: flex;
     margin-bottom: 12px;
+    margin-top: 10px;
 }
 
 .select-age-wrap {
