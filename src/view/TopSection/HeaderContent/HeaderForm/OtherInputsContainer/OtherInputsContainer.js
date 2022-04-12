@@ -13,6 +13,7 @@ const {RangePicker} = DatePicker;
 function OtherInputsContainer(props) {
     const [value, setValue] = useState("");
     const [dateString, setDateString] = useState("");
+    const [isToggleNumbers, setIsToggleNumbers] = useState(false);
 
     const funcForChange = props.funcForChange;
     const name = props.name;
@@ -30,7 +31,15 @@ function OtherInputsContainer(props) {
             [dateString] : dateStringChanged,
         });
     }
-    console.log(value, dateString)
+    console.log(value, dateString);
+
+    const handleNumbersWrapClick = () => {
+        setIsToggleNumbers(!isToggleNumbers);
+    }
+
+    console.log(isToggleNumbers)
+
+
     return (
         <div className="left-container">
             <DestinationHiddenInput funcForChange={props.funcForChange} value={props.name}/>
@@ -51,7 +60,7 @@ function OtherInputsContainer(props) {
                 </RangePicker>
             </div>
             <div className="main-numbers-wrap">
-                <div className="form-numbers-wrap">
+                <div className="form-numbers-wrap" onClick={handleNumbersWrapClick}>
                     <div className="form-numbers">
                         <div className="form-adults form-numbers-item">
                             <input onChange={funcForChange} value={name} type="text" className="form-input input-adults numbers-input"

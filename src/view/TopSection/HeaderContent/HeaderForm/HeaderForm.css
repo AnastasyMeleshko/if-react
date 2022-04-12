@@ -255,7 +255,7 @@
 }
 
 .filters-in-form {
-    display: none;
+    display: flex;
     width: 250px;
     background-color: #FFFFFF;
     border-radius: 8px;

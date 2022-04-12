@@ -76,7 +76,7 @@ function AvailableSection( props ) {
     }
 
     const handleScroll = (section) => {
-        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+        section?.scrollIntoView( { behavior: 'smooth', block: 'start' } );
     };
 
     if (showAvailable && loading)  {

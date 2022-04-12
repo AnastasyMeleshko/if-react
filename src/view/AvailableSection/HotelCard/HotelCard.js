@@ -40,9 +40,8 @@ const useFetch = (url) => {
 
 function HotelCard()  {
     const {id} = useParams();
-    const hotelId = id.slice(1,id.length);
 
-    const {hotelData, loading} = useFetch(`${urlForHotel}/${hotelId}`);
+    const {hotelData, loading} = useFetch(`${urlForHotel}/${id}`);
 
     const navigate = useNavigate();
 

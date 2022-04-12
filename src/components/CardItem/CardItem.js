@@ -8,11 +8,9 @@ function CardItem(element) {
 
   const handleClick = (e) => {
       if (e.target.closest(".available-item")) {
-          navigate(`/hotels:${element.id}`);
+          navigate(`/hotels/${element.id}`);
       }
-
   }
-
 
    return (
        <div className={element.useClass} id={element.id} onClick={handleClick}>
