@@ -1,30 +1,66 @@
-import React from "react";
+import React, {useState} from "react";
+
+import 'antd/dist/antd.css';
 import "./OtherInputsContainer.css";
+
+import {DatePicker} from "antd";
 import DestinationHiddenInput from "./DestinationHiddenInput/DestinationHiddenInput";
 import ButtonItem from "../../../../../components/ButtonItem/ButtonItem";
+import moment from "moment";
+
+const {RangePicker} = DatePicker;
 
 function OtherInputsContainer(props) {
+    const [value, setValue] = useState("");
+    const [dateString, setDateString] = useState("");
+    const [isToggleNumbers, setIsToggleNumbers] = useState(false);
 
     const funcForChange = props.funcForChange;
     const name = props.name;
+
+    const date = new Date();
+    const today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+    const handleChange = (valueChanged,dateStringChanged) => {
+        setValue({
+            ...value,
+            [value] : valueChanged,
+        });
+        setDateString({
+            ...dateString,
+            [dateString] : dateStringChanged,
+        });
+    }
+    console.log(value, dateString);
+
+    const handleNumbersWrapClick = () => {
+        setIsToggleNumbers(!isToggleNumbers);
+    }
+
+    console.log(isToggleNumbers)
+
 
     return (
         <div className="left-container">
             <DestinationHiddenInput funcForChange={props.funcForChange} value={props.name}/>
             <div className="form-dates">
-                <div className="form-item check-inn">
-                    <input onChange={funcForChange} value={name} type="text" className="form-input input-date" name="user-check-in-date"
-                           id="form-user-check-in" required autoComplete="off"/>
-                    <label className="form-label label-inn" htmlFor="form-user-check-in">Check-in date</label>
-                </div>
-                <div className="form-item check-out">
-                    <input onChange={funcForChange} value={name} type="text" className="form-input input-date" name="user-check-out-date"
-                           id="form-user-check-out" required autoComplete="off"/>
-                    <label className="form-label label-out" htmlFor="form-user-check-out">Check-out date</label>
-                </div>
+                <RangePicker format="ddd DD MMM" bordered={false} disabledDate={current => {
+                    return current < today && current < moment().endOf("day") && current;
+                }} onChange={handleChange}>
+                    <div className="form-item check-inn">
+                        <input onChange={funcForChange} value={name} type="text" className="form-input input-date" name="user-check-in-date"
+                               id="form-user-check-in" required autoComplete="off"/>
+                        <label className="form-label label-inn" htmlFor="form-user-check-in">Check-in date</label>
+                    </div>
+                    <div className="form-item check-out">
+                        <input onChange={funcForChange} value={name} type="text" className="form-input input-date" name="user-check-out-date"
+                               id="form-user-check-out" required autoComplete="off"/>
+                        <label className="form-label label-out" htmlFor="form-user-check-out">Check-out date</label>
+                    </div>
+                </RangePicker>
             </div>
             <div className="main-numbers-wrap">
-                <div className="form-numbers-wrap">
+                <div className="form-numbers-wrap" onClick={handleNumbersWrapClick}>
                     <div className="form-numbers">
                         <div className="form-adults form-numbers-item">
                             <input onChange={funcForChange} value={name} type="text" className="form-input input-adults numbers-input"

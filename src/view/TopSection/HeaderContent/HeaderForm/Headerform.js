@@ -1,10 +1,16 @@
 import React, { useState} from "react";
+
+// import { createContext} from "react";
+
 import {useNavigate} from "react-router-dom";
 // import PropTypes from "prop-types";
 import "./HeaderForm.css";
 import DestinationShownInput from "./DestinationShownInput/DestinationShownInput";
 import FiltersInForm from "./FiltersInForm/FiltersInForm";
 import OtherInputsContainer from "./OtherInputsContainer/OtherInputsContainer";
+
+// const Context = createContext({});
+// const value = 'My Context Value';
 
 const useForm = (setSearchValue) => {
 
@@ -69,11 +75,11 @@ const HeaderForm = ( {setSearchValue} ) => {
     const name = values.name;
 
         return (
-            <form onSubmit={handleSubmit} action="" className="form-main col-lg-12">
-                <DestinationShownInput funcForChange={handleChange} value={name}/>
-                <OtherInputsContainer funcForChange={handleChange} value={name}/>
-                <FiltersInForm/>
-            </form>
+                <form onSubmit={handleSubmit} action="" className="form-main col-lg-12">
+                    <DestinationShownInput funcForChange={handleChange} value={name}/>
+                    <OtherInputsContainer funcForChange={handleChange} value={name}/>
+                    <FiltersInForm/>
+                </form>
         );
 
         // HeaderForm.propTypes = {
