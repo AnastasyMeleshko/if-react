@@ -1,4 +1,5 @@
 import React, { useState} from "react";
+import {useNavigate} from "react-router-dom";
 // import PropTypes from "prop-types";
 import "./HeaderForm.css";
 import DestinationShownInput from "./DestinationShownInput/DestinationShownInput";
@@ -6,28 +7,15 @@ import FiltersInForm from "./FiltersInForm/FiltersInForm";
 import OtherInputsContainer from "./OtherInputsContainer/OtherInputsContainer";
 
 const useForm = (setSearchValue) => {
+
+    const navigate = useNavigate();
     const [values, setValues] = useState({
 
     });
 
-    const section = document.querySelector( '#available-title' );
-    const availableItemsBlock = document.querySelector(".available-items-slider");
-
-    const handleScroll = () => {
-        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        if (availableItemsBlock !== null) {
-            handleScroll();
-        }
-
-        if (availableItemsBlock === null) {
-            alert("Please check your search request");
-        }
-
+        navigate("/hotels");
     }
 
     const handleChange = (e) => {
