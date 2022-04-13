@@ -366,7 +366,7 @@
 }
 
 .select-age-wrap {
-    display: none;
+    display: flex;
     position: relative;
     height: 100%;
 }
@@ -404,7 +404,7 @@ i {
 .arrow {
     position: absolute;
     z-index: 1;
-    top: 10px;
+    top: 3px;
     left: 80px;
 }
 
