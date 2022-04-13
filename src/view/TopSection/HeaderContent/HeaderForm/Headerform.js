@@ -1,27 +1,30 @@
-import React, { useState} from "react";
-
-// import { createContext} from "react";
-
+import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
-// import PropTypes from "prop-types";
 import "./HeaderForm.css";
 import DestinationShownInput from "./DestinationShownInput/DestinationShownInput";
 import FiltersInForm from "./FiltersInForm/FiltersInForm";
 import OtherInputsContainer from "./OtherInputsContainer/OtherInputsContainer";
 
-// const Context = createContext({});
-// const value = 'My Context Value';
-
 const useForm = (setSearchValue) => {
 
     const navigate = useNavigate();
-    const [values, setValues] = useState({
-
-    });
+    const [values, setValues] = useState({});
+    const [isToggleNumbers, setIsToggleNumbers] = useState(false);
+    const [borderNumbersWrapColor, setBorderNumbersWrapColor] = useState(`transparent`);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate("/hotels");
+    }
+
+
+    const handleNumbersWrapClick = () => {
+        setIsToggleNumbers(!isToggleNumbers);
+        if (isToggleNumbers === false) {
+            setBorderNumbersWrapColor(`#f5bd41`);
+        } else {
+            setBorderNumbersWrapColor(`transparent`);
+        }
     }
 
     const handleChange = (e) => {
@@ -64,27 +67,33 @@ const useForm = (setSearchValue) => {
 
     return {
         values,
+        isToggleNumbers,
+        borderNumbersWrapColor,
         handleSubmit,
         handleChange,
+        handleNumbersWrapClick,
     };
 }
 
 const HeaderForm = ( {setSearchValue} ) => {
 
-    const { values, handleSubmit, handleChange } = useForm(setSearchValue);
+    const {
+        values,
+        handleSubmit,
+        handleChange,
+        isToggleNumbers,
+        handleNumbersWrapClick,
+        borderNumbersWrapColor } = useForm(setSearchValue);
+
     const name = values.name;
 
         return (
                 <form onSubmit={handleSubmit} action="" className="form-main col-lg-12">
                     <DestinationShownInput funcForChange={handleChange} value={name}/>
-                    <OtherInputsContainer funcForChange={handleChange} value={name}/>
-                    <FiltersInForm/>
+                    <OtherInputsContainer handleNumbersWrapClick={handleNumbersWrapClick} borderColor={borderNumbersWrapColor} funcForChange={handleChange} value={name}/>
+                    <FiltersInForm isToggleNumbers={isToggleNumbers}/>
                 </form>
         );
-
-        // HeaderForm.propTypes = {
-        //     setSearchValue: PropTypes.func;
-        // }
 
 }
 

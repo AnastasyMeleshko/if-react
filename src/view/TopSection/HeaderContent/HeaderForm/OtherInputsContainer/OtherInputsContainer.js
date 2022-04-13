@@ -13,7 +13,10 @@ const {RangePicker} = DatePicker;
 function OtherInputsContainer(props) {
     const [value, setValue] = useState("");
     const [dateString, setDateString] = useState("");
-    const [isToggleNumbers, setIsToggleNumbers] = useState(false);
+
+    const handleNumbersWrapClick = props.handleNumbersWrapClick;
+    const borderNumbersWrapColor = props.borderColor;
+    console.log(borderNumbersWrapColor);
 
     const funcForChange = props.funcForChange;
     const name = props.name;
@@ -32,12 +35,6 @@ function OtherInputsContainer(props) {
         });
     }
     console.log(value, dateString);
-
-    const handleNumbersWrapClick = () => {
-        setIsToggleNumbers(!isToggleNumbers);
-    }
-
-    console.log(isToggleNumbers)
 
 
     return (
@@ -59,9 +56,9 @@ function OtherInputsContainer(props) {
                     </div>
                 </RangePicker>
             </div>
-            <div className="main-numbers-wrap">
-                <div className="form-numbers-wrap" onClick={handleNumbersWrapClick}>
-                    <div className="form-numbers">
+            <div className="main-numbers-wrap" style={{borderColor: `${borderNumbersWrapColor}`,}}>
+                <div className="form-numbers-wrap" onClick={handleNumbersWrapClick} >
+                    <div className="form-numbers" style={{borderColor: `${borderNumbersWrapColor}`,}}>
                         <div className="form-adults form-numbers-item">
                             <input onChange={funcForChange} value={name} type="text" className="form-input input-adults numbers-input"
                                    name="user-adults" id="form-user-adults" autoComplete="off"/>
@@ -81,7 +78,7 @@ function OtherInputsContainer(props) {
                             <p className="text-for-input shown">1</p>
                         </div>
                     </div>
-                    <div className="form-numbers-big-screen">
+                    <div className="form-numbers-big-screen" style={{borderColor: `${borderNumbersWrapColor}`,}}>
                         <div className="form-input-bg form-input-adults">
                                     <span className="form-label-bg form-label-adults">
                                         1 Adults
