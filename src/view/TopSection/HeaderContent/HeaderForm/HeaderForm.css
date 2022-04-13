@@ -413,7 +413,7 @@ i {
     line-height: 18px;
     font-style: normal;
     font-weight: 500;
-    display: none;
+    display: flex;
     color: var(--text-for-input-numbers);
     position: relative;
     top: -25px;

@@ -1,13 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 import "./FiltersInForm.css";
 import FilterBlockElement from "./FilterBlockElement/FilterBlockElement";
 import SelectorAge from "./FilterBlockElement/SelectorAge/SelectorAge";
 
 function FiltersInForm(props) {
-    const [count1, setCount1] = useState(1);
-    const [count2, setCount2] = useState(0);
-    const [count3, setCount3] = useState(1);
     const isToggleNumbers = props.isToggleNumbers;
+    const count1 = props.count1;
+    const setCount1 = props.setCount1;
+    const count2 = props.count2;
+    const setCount2 = props.setCount2;
+    const count3 = props.count3;
+    const setCount3 = props.setCount3;
 
     return (
         <>

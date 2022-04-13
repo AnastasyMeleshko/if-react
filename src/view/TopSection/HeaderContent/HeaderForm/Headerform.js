@@ -11,12 +11,14 @@ const useForm = (setSearchValue) => {
     const [values, setValues] = useState({});
     const [isToggleNumbers, setIsToggleNumbers] = useState(false);
     const [borderNumbersWrapColor, setBorderNumbersWrapColor] = useState(`transparent`);
+    const [count1, setCount1] = useState(1);
+    const [count2, setCount2] = useState(0);
+    const [count3, setCount3] = useState(1);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate("/hotels");
     }
-
 
     const handleNumbersWrapClick = () => {
         setIsToggleNumbers(!isToggleNumbers);
@@ -47,21 +49,21 @@ const useForm = (setSearchValue) => {
             document.getElementById("user-destination").value = `${e.target.value}`;
         }
 
-        // form-numbers inputs values update from main bg divs with numbers
-        const formLabelAdults = document.querySelector(".form-label-adults");
-        const adultsNumber = formLabelAdults.innerHTML.slice(0,1);
-        const inputAdults = document.getElementById("form-user-adults");
-        inputAdults.value = `${adultsNumber}`;
-
-        const formLabelChildren = document.querySelector(".form-label-children");
-        const childrenNumber = formLabelChildren.innerHTML.slice(0,1);
-        const inputChildren = document.getElementById("form-user-children");
-        inputChildren.value = `${childrenNumber}`;
-
-        const formLabelRooms = document.querySelector(".form-label-rooms");
-        const roomsNumber = formLabelRooms.innerHTML.slice(0,1);
-        const inputRooms = document.getElementById("form-user-rooms");
-        inputRooms.value = `${roomsNumber}`;
+        // // form-numbers inputs values update from main bg divs with numbers
+        // const formLabelAdults = document.querySelector(".form-label-adults");
+        // const adultsNumber = formLabelAdults.innerHTML.slice(0,1);
+        // const inputAdults = document.getElementById("form-user-adults");
+        // inputAdults.value = `${adultsNumber}`;
+        //
+        // const formLabelChildren = document.querySelector(".form-label-children");
+        // const childrenNumber = formLabelChildren.innerHTML.slice(0,1);
+        // const inputChildren = document.getElementById("form-user-children");
+        // inputChildren.value = `${childrenNumber}`;
+        //
+        // const formLabelRooms = document.querySelector(".form-label-rooms");
+        // const roomsNumber = formLabelRooms.innerHTML.slice(0,1);
+        // const inputRooms = document.getElementById("form-user-rooms");
+        // inputRooms.value = `${roomsNumber}`;
 
     };
 
@@ -69,9 +71,15 @@ const useForm = (setSearchValue) => {
         values,
         isToggleNumbers,
         borderNumbersWrapColor,
+        count1,
+        count2,
+        count3,
         handleSubmit,
         handleChange,
         handleNumbersWrapClick,
+        setCount1,
+        setCount2,
+        setCount3,
     };
 }
 
@@ -83,15 +91,39 @@ const HeaderForm = ( {setSearchValue} ) => {
         handleChange,
         isToggleNumbers,
         handleNumbersWrapClick,
-        borderNumbersWrapColor } = useForm(setSearchValue);
+        borderNumbersWrapColor,
+        count1,
+        count2,
+        count3,
+        setCount1,
+        setCount2,
+        setCount3,
+
+    } = useForm(setSearchValue);
 
     const name = values.name;
 
         return (
                 <form onSubmit={handleSubmit} action="" className="form-main col-lg-12">
                     <DestinationShownInput funcForChange={handleChange} value={name}/>
-                    <OtherInputsContainer handleNumbersWrapClick={handleNumbersWrapClick} borderColor={borderNumbersWrapColor} funcForChange={handleChange} value={name}/>
-                    <FiltersInForm isToggleNumbers={isToggleNumbers}/>
+                    <OtherInputsContainer
+                        count1={count1}
+                        count2={count2}
+                        count3={count3}
+                        handleNumbersWrapClick={handleNumbersWrapClick}
+                        borderColor={borderNumbersWrapColor}
+                        funcForChange={handleChange}
+                        value={name}
+                    />
+                    <FiltersInForm
+                        count1={count1}
+                        setCount1={setCount1}
+                        count2={count2}
+                        setCount2={setCount2}
+                        count3={count3}
+                        setCount3={setCount3}
+                        isToggleNumbers={isToggleNumbers}
+                    />
                 </form>
         );
 
