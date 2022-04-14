@@ -1,0 +1,43 @@
+.select-age-wrap {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+
+.selector-age {
+    font-size: 12px;
+    line-height: 14px;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-flex;
+    border: 1px solid #3077C6;
+    border-radius: 0;
+    padding: 8px;
+    appearance: none;
+    outline: none;
+    position: relative;
+    width: 100px;
+}
+
+.selector-age > option {
+    border-radius: 0;
+}
+
+i {
+    border: solid #3077C6;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.arrow-down {
+    transform: rotate(45deg);
+}
+
+.arrow {
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    left: 80px;
+}

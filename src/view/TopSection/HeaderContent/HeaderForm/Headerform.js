@@ -49,22 +49,6 @@ const useForm = (setSearchValue) => {
             document.getElementById("user-destination").value = `${e.target.value}`;
         }
 
-        // // form-numbers inputs values update from main bg divs with numbers
-        // const formLabelAdults = document.querySelector(".form-label-adults");
-        // const adultsNumber = formLabelAdults.innerHTML.slice(0,1);
-        // const inputAdults = document.getElementById("form-user-adults");
-        // inputAdults.value = `${adultsNumber}`;
-        //
-        // const formLabelChildren = document.querySelector(".form-label-children");
-        // const childrenNumber = formLabelChildren.innerHTML.slice(0,1);
-        // const inputChildren = document.getElementById("form-user-children");
-        // inputChildren.value = `${childrenNumber}`;
-        //
-        // const formLabelRooms = document.querySelector(".form-label-rooms");
-        // const roomsNumber = formLabelRooms.innerHTML.slice(0,1);
-        // const inputRooms = document.getElementById("form-user-rooms");
-        // inputRooms.value = `${roomsNumber}`;
-
     };
 
     return {
@@ -102,6 +86,7 @@ const HeaderForm = ( {setSearchValue} ) => {
     } = useForm(setSearchValue);
 
     const name = values.name;
+    // console.log(values["user-destination"])
 
         return (
                 <form onSubmit={handleSubmit} action="" className="form-main col-lg-12">

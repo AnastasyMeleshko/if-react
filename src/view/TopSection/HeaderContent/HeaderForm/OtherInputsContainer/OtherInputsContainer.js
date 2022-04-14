@@ -22,7 +22,6 @@ function OtherInputsContainer(props) {
     const count2 = props.count2;
     const count3 = props.count3;
 
-
     const date = new Date();
     const today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
@@ -36,7 +35,6 @@ function OtherInputsContainer(props) {
             [dateString] : dateStringChanged,
         });
     }
-    console.log(value, dateString);
 
 
     return (
