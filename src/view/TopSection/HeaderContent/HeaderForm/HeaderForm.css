@@ -5,35 +5,6 @@
     position: relative;
 }
 
-.form-destination {
-    width: 100%;
-    height: 71px;
-    text-align: left;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    border: 3px solid #F3F3F4;
-    position: relative;
-    display: flex;
-}
-
-.form-destination > input {
-    border-radius: 8px;
-    max-width: 375px;
-    max-height: 71px;
-    position: absolute;
-    left: -3px;
-    top: -3px;
-    cursor: pointer;
-}
-
-.form-destination > label {
-    position: absolute;
-    top: 22px;
-    left: 24px;
-    display: flex;
-    max-width: 340px;
-}
-
 .form-input:focus ~ .form-label,
 .form-input:valid + .form-label {
     position: absolute;
@@ -258,61 +229,6 @@
     display: flex;
 }
 
-.shadow-block {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 20px;
-    line-height: 18px;
-    font-style: normal;
-    font-weight: 500;
-}
-
-.inform-block {
-    width: 50%;
-    height: 28%;
-    display: flex;
-    flex-direction: column;
-    background-color: #FFFFFF;
-    color: #000000;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-.confirm-btn {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    background-color: #3077C6;
-    border: 3px solid #3077C6;
-    border-radius: 8px;
-    color: #FFFFFF;
-    font-size: 24px;
-    line-height: 28px;
-    font-style: normal;
-    font-weight: 500;
-    padding: 12px 57px;
-    cursor: pointer;
-    width: 20%;
-    max-height: 72px;
-    transition: all 0.3s ease-in-out;
-    margin-top: 50px;
-}
-
-
 @media only screen and (max-width: 480px) {
     /* For extra small devices (xs) 0-480px */
     .col-xs-1 {width: calc(100% / var(--column-count) * 1);}
@@ -327,15 +243,6 @@
     .col-xs-10 {width: calc(100% / var(--column-count) * 10);}
     .col-xs-11 {width: calc(100% / var(--column-count) * 11);}
     .col-xs-12 {width: calc(100% / var(--column-count) * 12);}
-
-    .form-destination-shown  {
-        display: none;
-
-    }
-
-    .form-destination {
-        display: none;
-    }
 
     .form-main {
         margin-top: 32px;
@@ -482,42 +389,8 @@
         display: flex;
     }
 
-    .date-picker {
-        top: -525px;
-        left: 12px;
-        width: 85%;
-    }
-
-    .date-picker .dates.active {
-        flex-wrap: wrap;
-        border: 2px solid #10367C;
-        justify-content: space-around;
-    }
-
     .months-first, .months-second {
         width: 50%;
-    }
-
-    .dates-buttons {
-        flex-direction: row;
-        justify-content: center;
-        max-width: 100%;
-        margin: 0;
-    }
-
-    .dates-buttons .check-in-btn, .dates-buttons .check-out-btn  {
-        width: 155px;
-    }
-    .dates-buttons > button {
-        margin: 10px 0;
-    }
-
-    .dates-buttons button:not(:last-child) {
-        margin-right: 10px;
-    }
-
-    .months-second, .months-first {
-        width: 45%;
     }
 
 }
@@ -537,14 +410,6 @@
     .col-sm-11 {width: calc(100% / var(--column-count) * 11);}
     .col-sm-12 {width: calc(100% / var(--column-count) * 12);}
 
-    .form-destination-shown  {
-        display: none;
-    }
-
-    .form-destination {
-        display: none;
-    }
-
     .form-main {
         margin-top: 32px;
         cursor: pointer;
@@ -692,43 +557,10 @@
         display: flex;
     }
 
-    .date-picker {
-        top: -525px;
-        left: 12px;
-        width: 85%;
-    }
-
-    .date-picker .dates.active {
-        flex-wrap: wrap;
-        border: 2px solid #10367C;
-        justify-content: space-around;
-    }
-
     .months-first, .months-second {
         width: 50%;
     }
 
-    .dates-buttons {
-        flex-direction: row;
-        justify-content: center;
-        max-width: 100%;
-        margin: 0;
-    }
-
-    .dates-buttons .check-in-btn, .dates-buttons .check-out-btn  {
-        width: 155px;
-    }
-    .dates-buttons > button {
-        margin: 10px 0;
-    }
-
-    .dates-buttons button:not(:last-child) {
-        margin-right: 10px;
-    }
-
-    .months-second, .months-first {
-        width: 45%;
-    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -745,10 +577,6 @@
     .col-md-10 {width: calc(100% / var(--column-count) * 10);}
     .col-md-11 {width: calc(100% / var(--column-count) * 11);}
     .col-md-12 {width: calc(100% / var(--column-count) * 12);}
-
-    .form-destination-shown  {
-        display: none;
-    }
 
     .form-main {
         margin-top: 100px;
@@ -894,31 +722,6 @@
         display: flex;
     }
 
-    .date-picker {
-        top: -525px;
-        left: 12px;
-        width: 100%;
-    }
-
-    .date-picker .dates.active {
-        border: 2px solid #10367C;
-        flex-wrap: nowrap;
-    }
-
-    .dates-buttons {
-        flex-direction: column;
-        max-width: 24%;
-        margin: 0 auto;
-    }
-
-    .dates-buttons button:not(:last-child) {
-        margin-right: 0;
-    }
-
-    .dates-buttons .check-in-btn, .dates-buttons .check-out-btn  {
-        width: 110px;
-    }
-
 }
 
 
@@ -936,15 +739,6 @@
     .col-lg-10 {width: calc(100% / var(--column-count) * 10);}
     .col-lg-11 {width: calc(100% / var(--column-count) * 11);}
     .col-lg-12 {width: calc(100% / var(--column-count) * 12);}
-
-    .form-destination-shown  {
-        display: flex;
-        position: relative;
-    }
-
-    .form-destination {
-        max-width: 100%;
-    }
 
     .form-dates {
         margin: 0;
@@ -1079,35 +873,6 @@
         width: 327px;
         transform: translateY(0);
         opacity: 1;
-    }
-
-    .date-picker {
-        top: -15px;
-        left: 80px;
-        width: 100%;
-    }
-
-    .date-picker .dates.active {
-        border: 2px solid transparent;
-        flex-wrap: nowrap;
-    }
-
-    .dates-buttons {
-        flex-direction: column;
-        max-width: 24%;
-        margin: 0 auto;
-    }
-
-    .dates-buttons button:not(:last-child) {
-        margin-right: 0;
-    }
-
-    .check-in-btn, .check-out-btn {
-        width: 100%;
-    }
-
-    .dates-buttons .check-in-btn, .dates-buttons .check-out-btn  {
-        width: 110px;
     }
 
     .best-items-wrap, .best-items-slider {
