@@ -1,0 +1,72 @@
+.filters-in-form {
+    display: flex;
+    width: 250px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    position: absolute;
+    top: 85px;
+    right: 197px;
+    padding: 15px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: auto;
+    max-height: 240px;
+}
+
+.add-scroll {
+    overflow-y: scroll;
+}
+
+.text-about-children {
+    font-size: 12px;
+    line-height: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    margin-bottom: 12px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+/* For extra small devices (xs) 0-480px */
+    .filters-in-form {
+        top: -40%;
+        right: 50%;
+        transform: translateX(50%);
+        border: 2px solid #10367C;
+    }
+
+}
+
+@media only screen and (min-width: 480px) {
+/* For small devices (sm) 480px-768px */
+    .filters-in-form {
+        top: -40%;
+        right: 50%;
+        transform: translateX(50%);
+        border: 2px solid #10367C;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+/* For medium devices (md) 768px-1210px */
+    .filters-in-form {
+        top: -40%;
+        right: 50%;
+        transform: translateX(50%);
+        border: 2px solid #10367C;
+    }
+}
+
+@media only screen and (min-width: 1210px) {
+/* For large devices (lg) 1210px - and > */
+    .filters-in-form {
+        top: 85px;
+        right: 197px;
+        border: 0;
+        transform: translateX(0);
+    }
+}
+

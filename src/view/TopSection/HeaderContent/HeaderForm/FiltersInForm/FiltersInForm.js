@@ -1,60 +1,56 @@
 import React from "react";
 import "./FiltersInForm.css";
+import FilterBlockElement from "./FilterBlockElement/FilterBlockElement";
+import SelectorAge from "./FilterBlockElement/SelectorAge/SelectorAge";
 
-function FiltersInForm() {
+function FiltersInForm(props) {
+    const isToggleNumbers = props.isToggleNumbers;
+    const count1 = props.count1;
+    const setCount1 = props.setCount1;
+    const count2 = props.count2;
+    const setCount2 = props.setCount2;
+    const count3 = props.count3;
+    const setCount3 = props.setCount3;
 
     return (
-        <div className="filters-in-form">
-            <div className="filters-block-element"><span
-                className="filter-text filter-text-Adults">Adults</span>
-                <div className="square-button square-button-minus button-minus-Adults minus-btn-Adults">
-                    <div className="minus-in-btn minus-minus-in-btn">
-                    </div>
-                </div>
-                <div className="counter-number counter-number-Adults">1</div>
-                <div className="square-button square-button-plus button-plus-Adults plus-btn-Adults">
-                    <div className="minus-in-btn minus-in-btn-plus">
-                    </div>
-                    <div className="minus-in-btn-vertical minus-in-btn-plus">
-                    </div>
-                </div>
-            </div>
-            <div className="filters-block-element"><span
-                className="filter-text filter-text-Children">Children</span>
-                <div className="square-button square-button-minus button-minus-Children minus-btn-Children">
-                    <div className="minus-in-btn minus-minus-in-btn">
-                    </div>
-                </div>
-                <div className="counter-number counter-number-Children">0</div>
-                <div className="square-button square-button-plus button-plus-Children plus-btn-Children">
-                    <div className="minus-in-btn minus-in-btn-plus">
-                    </div>
-                    <div className="minus-in-btn-vertical minus-in-btn-plus">
-                    </div>
-                </div>
-            </div>
-            <div className="filters-block-element">
-                        <span className="filter-text filter-text-Rooms">
-                            Rooms
-                        </span>
-                <div className="square-button square-button-minus button-minus-Rooms minus-btn-Rooms">
-                    <div className="minus-in-btn minus-minus-in-btn">
-                    </div>
-                </div>
-                <div className="counter-number counter-number-Rooms">1</div>
-                <div className="square-button square-button-plus button-plus-Rooms plus-btn-Rooms">
-                    <div className="minus-in-btn minus-in-btn-plus">
-                    </div>
-                    <div className="minus-in-btn-vertical minus-in-btn-plus">
-                    </div>
-                </div>
-            </div>
-            <p className="text-about-children">
-                What is the age of the child you’re travelling with?
-            </p>
-        </div>
+        <>
+            {isToggleNumbers ?
+                <>
+                    {count2 > 0 ?
+                        <div className="filters-in-form add-scroll">
+                            <FilterBlockElement filterName={`Adults`} counter={count1} handleCounter={setCount1} minimum={1} maximum={30}/>
+                            <FilterBlockElement filterName={`Children`} counter={count2} handleCounter={setCount2} minimum={0} maximum={10}/>
+                            <FilterBlockElement filterName={`Rooms`} counter={count3} handleCounter={setCount3} minimum={1} maximum={30}/>
+                            {count2 > 0 && <p className="text-about-children">
+                                What is the age of the child you’re travelling with?
+                            </p>}
+                            {count2 > 0 &&
+                            <>
+                                {[...Array(count2)].fill(null).map((item, index) =>
+                                    <SelectorAge key={index} />
+                                )}
+                            </>
+                            }
+                        </div> :
+                        <div className="filters-in-form">
+                            <FilterBlockElement filterName={`Adults`} counter={count1} handleCounter={setCount1} minimum={1} maximum={30}/>
+                            <FilterBlockElement filterName={`Children`} counter={count2} handleCounter={setCount2} minimum={0} maximum={10}/>
+                            <FilterBlockElement filterName={`Rooms`} counter={count3} handleCounter={setCount3} minimum={1} maximum={30}/>
+                            {count2 > 0 && <p className="text-about-children">
+                                What is the age of the child you’re travelling with?
+                            </p>}
+                            {count2 > 0 &&
+                            <>
+                                {[...Array(count2)].fill(null).map((item, index) =>
+                                    <SelectorAge key={index} />
+                                )}
+                            </>
+                            }
+                        </div>}
+                </>
+                : ""}
+        </>
     );
 }
-
 
 export default FiltersInForm;

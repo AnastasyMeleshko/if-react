@@ -13,10 +13,14 @@ const {RangePicker} = DatePicker;
 function OtherInputsContainer(props) {
     const [value, setValue] = useState("");
     const [dateString, setDateString] = useState("");
-    const [isToggleNumbers, setIsToggleNumbers] = useState(false);
 
+    const handleNumbersWrapClick = props.handleNumbersWrapClick;
+    const borderNumbersWrapColor = props.borderColor;
     const funcForChange = props.funcForChange;
     const name = props.name;
+    const count1 = props.count1;
+    const count2 = props.count2;
+    const count3 = props.count3;
 
     const date = new Date();
     const today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
@@ -31,13 +35,6 @@ function OtherInputsContainer(props) {
             [dateString] : dateStringChanged,
         });
     }
-    console.log(value, dateString);
-
-    const handleNumbersWrapClick = () => {
-        setIsToggleNumbers(!isToggleNumbers);
-    }
-
-    console.log(isToggleNumbers)
 
 
     return (
@@ -59,46 +56,54 @@ function OtherInputsContainer(props) {
                     </div>
                 </RangePicker>
             </div>
-            <div className="main-numbers-wrap">
-                <div className="form-numbers-wrap" onClick={handleNumbersWrapClick}>
-                    <div className="form-numbers">
+            <div className="main-numbers-wrap" style={{borderColor: `${borderNumbersWrapColor}`,}}>
+                <div className="form-numbers-wrap" onClick={handleNumbersWrapClick} >
+                    <div className="form-numbers" style={{borderColor: `${borderNumbersWrapColor}`,}}>
                         <div className="form-adults form-numbers-item">
                             <input onChange={funcForChange} value={name} type="text" className="form-input input-adults numbers-input"
                                    name="user-adults" id="form-user-adults" autoComplete="off"/>
                             <label className="form-label label-adults" htmlFor="form-user-adults">Adults</label>
-                            <p className="text-for-input shown">1</p>
+                            <p className="text-for-input">{count1}</p>
                         </div>
                         <div className="form-children form-numbers-item">
-                            <input onChange={funcForChange} value={name} type="text" className="form-input input-children numbers-input"
-                                   name="user-children" id="form-user-children" autoComplete="off"/>
+                            <input
+                                onChange={funcForChange}
+                                value={name}
+                                type="text"
+                                className="form-input input-children numbers-input"
+                                name="user-children"
+                                id="form-user-children"
+                                autoComplete="off"
+                                style={{borderLeft: `2px solid #BFBFBF`, borderRight: `2px solid #BFBFBF`, borderRadius: "0",}}
+                            />
                             <label className="form-label label-children" htmlFor="form-user-children">Children</label>
-                            <p className="text-for-input shown">0</p>
+                            <p className="text-for-input">{count2}</p>
                         </div>
                         <div className="form-rooms form-numbers-item">
                             <input onChange={funcForChange} value={name} type="text" className="form-input input-rooms numbers-input"
                                    name="user-rooms" id="form-user-rooms" autoComplete="off"/>
                             <label className="form-label label-rooms" htmlFor="form-user-rooms">Rooms</label>
-                            <p className="text-for-input shown">1</p>
+                            <p className="text-for-input">{count3}</p>
                         </div>
                     </div>
-                    <div className="form-numbers-big-screen">
+                    <div className="form-numbers-big-screen" style={{borderColor: `${borderNumbersWrapColor}`,}}>
                         <div className="form-input-bg form-input-adults">
                                     <span className="form-label-bg form-label-adults">
-                                        1 Adults
+                                        {count1} Adults
                                     </span>
                         </div>
                         <div className="first-line">
                         </div>
                         <div className="form-input-bg form-input-children">
                                     <span className="form-label-bg form-label-children">
-                                        0 Children
+                                        {count2} Children
                                     </span>
                         </div>
                         <div className="second-line">
                         </div>
                         <div className="form-input-bg form-input-rooms">
                                     <span className="form-label-bg form-label-rooms">
-                                        1 Rooms
+                                        {count3} Rooms
                                     </span>
                         </div>
                     </div>

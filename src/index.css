@@ -9,7 +9,7 @@
     --borderNumbersColor: transparent;
     --btn-plus-color: #3077C6;
     --btn-minus-color: #CECECE;
-    --text-for-input-numbers: transparent;
+    --text-for-input-numbers: #000000;
 }
 
 * {
