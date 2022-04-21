@@ -7,6 +7,38 @@
     right: 0;
 }
 
+.ant-picker {
+    width: 100%;
+    display: flex;
+    background-color: #FFFFFF;
+    color: #000000 !important;
+}
+
+.ant-picker.ant-picker-borderless {
+    background-color: #FFFFFF !important;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.ant-picker-input input {
+    padding: 22px 12px;
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+    color: #383838;
+    font-size: 18px;
+    line-height: 21px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.ant-picker-input input:focus {
+    outline: none;
+}
+
+
 @media only screen and (max-width: 768px) {
 /* For extra small devices (xs) & small devices (sm) 0-768px */
     .left-container {
@@ -16,6 +48,23 @@
         max-width: 100%;
         position: relative;
         margin: 0 auto;
+    }
+
+    .form-dates {
+        padding: 0 8px 4px 8px;
+        max-height: 100%;
+        background-color: #F5BD41;
+        height: 67px;
+    }
+
+    .ant-picker-panel-container .ant-picker-panels {
+        flex-wrap: wrap;
+        width: 281px;
+    }
+
+    .ant-picker-range-wrapper {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -28,6 +77,13 @@
         max-width: 857px;
         position: relative;
         margin: 0 auto;
+    }
+
+    .form-dates {
+        padding: 0 16px 4px;
+        max-height: 100%;
+        background-color: #F5BD41;
+        height: 67px;
     }
 }
 
@@ -43,5 +99,12 @@
         right: 0;
         padding: 0;
         background-color: transparent;
+    }
+
+    .form-dates {
+        padding: 0;
+        max-height: 100%;
+        background-color: #FFFFFF;
+        height: 71px;
     }
 }
