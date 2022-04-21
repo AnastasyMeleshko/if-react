@@ -41,9 +41,18 @@ function OtherInputsContainer(props) {
         <div className="left-container">
             <DestinationHiddenInput funcForChange={props.funcForChange} value={props.name}/>
             <div className="form-dates">
-                <RangePicker format="ddd DD MMM" bordered={false} disabledDate={current => {
+                <RangePicker
+                    format="ddd DD MMM" bordered={false} disabledDate={current => {
                     return current < today && current < moment().endOf("day") && current;
-                }} onChange={handleChange}>
+                    }}
+                    onChange={handleChange}
+                    style={{
+                        width: "100%",
+                        display: "flex",
+                        backgroundColor: "#FFFFFF !important",
+                        color: "#000",
+                    }}
+                >
                     <div className="form-item check-inn">
                         <input onChange={funcForChange} value={name} type="text" className="form-input input-date" name="user-check-in-date"
                                id="form-user-check-in" required autoComplete="off"/>
