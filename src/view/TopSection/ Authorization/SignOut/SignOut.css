@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+.sign-out:hover {
+    border: 1px solid #F5BD41;
+}
+
 .sign-out-img {
     width: 20px;
     height: 18px;
