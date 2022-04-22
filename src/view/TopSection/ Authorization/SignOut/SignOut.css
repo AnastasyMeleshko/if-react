@@ -1,0 +1,32 @@
+.sign-out {
+    color: #FFFFFF;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #FFFFFF;
+    border: 1px solid #CECECE;
+    padding: 14px 47px 14px 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sign-out-img {
+    width: 20px;
+    height: 18px;
+}
+
+.sign-out-svg {
+    fill: #333333;
+}
+
+.sign-out-text-block {
+    color:  #333333;
+    font-size: 20px;
+    line-height: 1.17em;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-left: 16px;
+}

@@ -15,7 +15,7 @@ const AuthorizationForm = () => {
 
     return (
         <form className="authorization-form" onSubmit={handleSubmit}>
-            <p className="auth-form-title">Sign in</p>
+            <p className="auth-form-title">Sign&nbsp;in</p>
             <div className="user-email-wrap">
                 <FormLabel className="label-user-email auth-label" htmlFor="user-email" labelText="Email address"/>
                 <FormInput  onChange={funcForChange} value={name} type="text" id="user-email" className="user-email auth-input" name="user-email" required="required"/>
@@ -24,7 +24,7 @@ const AuthorizationForm = () => {
                 <FormLabel className="label-user-password auth-label" htmlFor="user-password" labelText="Password"/>
                 <FormInput  onChange={funcForChange} value={name} type="text" id="user-password" className="user-password auth-input" name="user-password" required="required"/>
             </div>
-            <button type="submit" className="auth-button">Sign in</button>
+            <button type="submit" className="auth-button">Sign&nbsp;in</button>
         </form>
     )
 }
