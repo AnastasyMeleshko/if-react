@@ -1,0 +1,68 @@
+.authorization-form {
+    max-width: 400px;
+    background-color: #FFFFFF;
+    padding: 36px 40px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+    border: 1px solid #CECECE;
+}
+
+.user-email-wrap {
+    margin-bottom: 16px;
+}
+
+.auth-form-title {
+    font-size: 24px;
+    line-height: 1.17em;
+    font-style: normal;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.auth-label {
+    font-size: 16px;
+    line-height: 1.1875em;
+    font-style: normal;
+    font-weight: 100;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.auth-input {
+    font-size: 16px;
+    line-height: 1.1875em;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    border: 2px solid #CECECE;
+    border-radius: 8px;
+    padding: 12px 8px;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px 121px;
+    margin-top: 24px;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 1.17em;
+    font-style: normal;
+    font-weight: 400;
+    background-color: #3077C6;
+    border-radius: 8px;
+    border: 1px solid #3077C6;
+    transition: .5s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    background-color: #F5BD41;
+    color: #000000;
+    border: 1px solid #F5BD41;
+}

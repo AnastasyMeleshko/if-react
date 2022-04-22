@@ -66,6 +66,10 @@
         justify-content: center;
     }
 
+    .ant-picker-range-wrapper .ant-picker-panel-container {
+        margin-left: 0;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {

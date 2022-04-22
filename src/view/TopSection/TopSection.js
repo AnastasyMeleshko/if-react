@@ -2,6 +2,7 @@ import React from "react";
 import "./TopSection.css";
 import HeaderTop from "./HeaderTop/HeaderTop";
 import HeaderContent from "./HeaderContent/HeaderContent";
+import AuthorizationForm from "./ Authorization/AuthorizationForm/AuthorizationForm";
 
 function TopSection(props)  {
 
@@ -13,6 +14,7 @@ function TopSection(props)  {
                     <div className="top-section-wrapper container">
                         <HeaderTop/>
                         <HeaderContent setSearchValue={setSearchValue}/>
+                        <AuthorizationForm/>
                     </div>
                 </div>
             </header>

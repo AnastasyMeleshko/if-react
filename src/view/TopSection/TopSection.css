@@ -13,6 +13,7 @@
     padding-bottom: 0;
     padding-top: 50px;
     height: 100%;
+    position: relative;
 }
 
 .top-section-background {
