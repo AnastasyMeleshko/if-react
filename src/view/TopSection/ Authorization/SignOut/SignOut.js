@@ -2,9 +2,14 @@ import React from "react";
 import "./SignOut.css";
 import SvgIcon from "../../../../components/SvgIcon/SvgIcon";
 
-const SignOut = () => {
+const SignOut = ({ setUser }) => {
+
+    const logout = () => {
+        setUser(null);
+    }
+
     return (
-        <div className="sign-out">
+        <div className="sign-out" onClick={logout}>
             <SvgIcon
                 elemClass="sign-out-img"
                 svgClass="sign-out-svg"

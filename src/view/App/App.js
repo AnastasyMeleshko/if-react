@@ -16,18 +16,20 @@ import Footer from "../Footer/Footer";
 function App() {
 
   const [searchValue, setSearchValue] = useState("");
+  const [user, setUser] = useState(null);
+ console.log(user)
 
   return (
       <Router>
           <>
-              <TopSection setSearchValue={setSearchValue}/>
-                  <main className="main-sections-wrapper">
-                      <Routes>
-                              <Route path="/hotels" element={<AvailableSection searchValue={searchValue}/>}/>
-                              <Route path="/hotels/:id" element={<HotelCard/>}/>
-                              <Route path="/" element={<HomesSection/>}/>
-                      </Routes>
-                  </main>
+              <TopSection setSearchValue={setSearchValue} searchValue={searchValue} setUser={setUser} user={user}/>
+              <main className="main-sections-wrapper">
+                  <Routes>
+                          <Route path="/hotels" element={<AvailableSection searchValue={searchValue}/>}/>
+                          <Route path="/hotels/:id" element={<HotelCard/>}/>
+                          <Route path="/" element={<HomesSection/>}/>
+                  </Routes>
+              </main>
               <Footer/>
           </>
       </Router>

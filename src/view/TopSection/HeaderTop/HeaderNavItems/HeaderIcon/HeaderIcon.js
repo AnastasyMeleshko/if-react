@@ -8,9 +8,9 @@ function HeaderIcon(props) {
 
     return (
             <a href="#">
-                <svg className={useClasses} viewBox={props.viewBox} xmlns="http://www.w3.org/2000/svg">
-                    <path d={pathUse}/>
-                </svg>
+                    <svg className={useClasses} viewBox={props.viewBox} xmlns="http://www.w3.org/2000/svg">
+                        <path d={pathUse}/>
+                    </svg>
             </a>
     )
 }
