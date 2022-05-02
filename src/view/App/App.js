@@ -17,18 +17,20 @@ function App() {
 
   const [searchValue, setSearchValue] = useState("");
   const [user, setUser] = useState(null);
- console.log(user)
 
   return (
       <Router>
           <>
               <TopSection setSearchValue={setSearchValue} searchValue={searchValue} setUser={setUser} user={user}/>
               <main className="main-sections-wrapper">
-                  <Routes>
+                  {user ? (
+                      <Routes>
                           <Route path="/hotels" element={<AvailableSection searchValue={searchValue}/>}/>
                           <Route path="/hotels/:id" element={<HotelCard/>}/>
                           <Route path="/" element={<HomesSection/>}/>
-                  </Routes>
+                      </Routes>
+                  ) : ""
+                  }
               </main>
               <Footer/>
           </>
