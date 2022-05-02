@@ -23,6 +23,7 @@ const AuthorizationForm = (props) => {
         e.preventDefault();
         setUser(values);
         navigate("/");
+        console.log(values);
         console.log(user);
     }
 
