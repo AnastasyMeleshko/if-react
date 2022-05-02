@@ -5,6 +5,7 @@ import FormLabel from "../../HeaderContent/HeaderForm/commonComponents/FormLabel
 import {withUserData} from "../../../../hocs/Authorization-hoc/withUserData";
 import {withRequestedData} from "../../../../hocs/Authorization-hoc/withRequestedData";
 import { useNavigate } from "react-router-dom";
+// import {TopSectionContext} from "../../../../context/TopSectionData/TopSectionData";
 
 const AuthorizationForm = (props) => {
     const user = props.user;
@@ -14,9 +15,19 @@ const AuthorizationForm = (props) => {
     const handleChange = (e) => {
         setValue((prevState) => ({
             ...prevState,
-            [e.target.name] : e.target.value,
+            [e.target.name]: e.target.value,
         }));
     };
+
+
+    // const [data2, setData2] = useContext(TopSectionContext);
+    //     setData2( (prevState) => ([
+    //         ...prevState,
+    //         {email: `${values.email}`,
+    //         password: `${values.password}`}
+    // ]))
+    // console.log(data2)
+
 
     const navigate = useNavigate();
     const handleSignInSubmit = (e) => {
@@ -25,7 +36,13 @@ const AuthorizationForm = (props) => {
         navigate("/");
         console.log(values);
         console.log(user);
+    //     setData2( (prevState) => ([
+    //         ...prevState,
+    //         {email: `${values.email}`,
+    //         password: `${values.password}`}
+    // ]))
     }
+    // console.log(data2)
 
         return (
             <form className="authorization-form" onSubmit={handleSignInSubmit}>
