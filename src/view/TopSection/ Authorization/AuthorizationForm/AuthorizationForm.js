@@ -7,15 +7,8 @@ import {withRequestedData} from "../../../../hocs/Authorization-hoc/withRequeste
 import { useNavigate } from "react-router-dom";
 
 const AuthorizationForm = (props) => {
-    // ({user = {
-    //     email: "",
-    //     password: "",
-    // },
-    // data = [],
-    // }, props) => {
     const user = props.user;
     const setUser = props.setUser;
-
     const [values, setValue] = useState(null);
 
     const handleChange = (e) => {
@@ -25,21 +18,13 @@ const AuthorizationForm = (props) => {
         }));
     };
 
-    // const handleSubmit= (e) => {
-    //     e.preventDefault();
-    //
-    // }
-
-
-        const navigate = useNavigate();
-
-        const handleSignInSubmit = (e) => {
-            e.preventDefault();
-            setUser(values);
-            navigate("/");
-            console.log(user);
-            // console.log(data.results);
-        }
+    const navigate = useNavigate();
+    const handleSignInSubmit = (e) => {
+        e.preventDefault();
+        setUser(values);
+        navigate("/");
+        console.log(user);
+    }
 
         return (
             <form className="authorization-form" onSubmit={handleSignInSubmit}>
@@ -55,8 +40,6 @@ const AuthorizationForm = (props) => {
                 <button onSubmit={handleSignInSubmit} type="submit" className="auth-button">Sign&nbsp;in</button>
             </form>
         )
-
-
 }
 
     const pipe = (...funcs) => (target) => {

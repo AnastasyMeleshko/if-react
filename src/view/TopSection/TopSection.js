@@ -7,23 +7,19 @@ import TopSectionDataProvider from "../../context/TopSectionData/TopSectionDataP
 import {Routes, Route, Navigate} from "react-router-dom";
 
 function TopSection(props)  {
-
     const setSearchValue = props.setSearchValue;
-    // const searchValue = props.searchValue;
     const setUser = props.setUser;
     const user = props.user;
     let routePath;
-    // console.log(searchValue)
         if (user) {
             routePath = "/"
         }
-        // else if (user && searchValue) {
-        //     routePath = "/hotels"
-        // }
+        if (user) {
+            routePath = "/"
+        }
         if (!user) {
             routePath = "/auth";
         }
-
 
             return (
                 <TopSectionDataProvider>
@@ -35,25 +31,28 @@ function TopSection(props)  {
                                             <Route
                                                 path="/"
                                                 element={
-                                                    <>
-                                                        <HeaderTop
-                                                            user={user}
-                                                            setUser={setUser}
-                                                        />
-                                                        <HeaderContent
-                                                            setSearchValue={setSearchValue}/>
-                                                    </>
-                                                }
+                                            <>
+                                            <HeaderTop
+                                                user={user}
+                                                setUser={setUser}
                                             />
-
+                                            <HeaderContent
+                                                setSearchValue={setSearchValue}/>
+                                            </>
+                                            }
+                                            />
                                     )}
                                     {!user && (
                                         <Route
                                             path="/auth"
-                                            element={<>
-                                                <HeaderTop/>
-                                                <AuthorizationForm user={user} setUser={setUser}/>
-                                            </>}
+                                            element={
+                                        <>
+                                        <HeaderTop
+                                            user={user}
+                                            setUser={setUser}
+                                        />
+                                            <AuthorizationForm user={user} setUser={setUser}/>
+                                        </>}
                                         />
                                     )}
                                     <Route
@@ -66,8 +65,6 @@ function TopSection(props)  {
                     </header>
                 </TopSectionDataProvider>
             )
-
-
 }
 
 export default TopSection;

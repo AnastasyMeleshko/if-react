@@ -7,9 +7,9 @@ function HeaderIcon(props) {
     const useClasses = `header-icon` + ` ` + `${props.className}`;
 
     return (
-            <a href="#">
+            <a href="#" className={useClasses}>
                     <svg className={useClasses} viewBox={props.viewBox} xmlns="http://www.w3.org/2000/svg">
-                        <path d={pathUse}/>
+                        <path className={useClasses} d={pathUse}/>
                     </svg>
             </a>
     )
