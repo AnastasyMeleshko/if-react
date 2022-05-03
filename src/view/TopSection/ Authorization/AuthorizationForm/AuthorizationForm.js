@@ -32,7 +32,6 @@ const AuthorizationForm = (props) => {
             navigate("/");
         } else {
             setError(true);
-            console.log(error)
         }
     }
 
