@@ -9,12 +9,13 @@ import {createLogger} from 'redux-logger';
 
 const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__;
 const sagaMiddleware = createSagaMiddleware();
-const middlewares = [sagaMiddleware];
-const enhancers = [devToolsExtension()];
 const logger = createLogger();
+const middlewares = [sagaMiddleware, logger];
+const enhancers = [devToolsExtension()];
+
 
 const composedEnhencers = compose(
-    applyMiddleware(...middlewares, logger),
+    applyMiddleware(...middlewares),
     ...enhancers,
 );
 
