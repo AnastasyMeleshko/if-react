@@ -1,6 +1,9 @@
 import { all } from "redux-saga/effects";
-// import reviewsSaga from "../ducks/reviews/sagas";
+import reviewsSaga from "../ducks/reviews/sagas";
 
 export default function* rootSaga() {
-    yield all([]);
+    yield all([reviewsSaga()]);
 }
+//
+console.log(Date.parse(new Date()));
+

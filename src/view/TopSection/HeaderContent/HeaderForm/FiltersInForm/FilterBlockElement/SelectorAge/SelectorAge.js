@@ -23,13 +23,24 @@ const ages = [
 ];
 
 const SelectorAge = () => {
+
+    // const setChildrenAge = props.setChildrenAge;
+
+
     return (
         <div className="select-age-wrap">
             <select name="children-age" className="selector-age">
                 {ages.map((age,index) => (
                     (index === 0) ?
-                    <option key={index} defaultValue={'DEFAULT'} value={`value${index} years old`}>{age}</option>
-                        : <option key={index} value={`value${index} years old`}>{age}</option>
+                        <option
+                        key={index}
+                        defaultValue={'DEFAULT'}
+                        value={`value${index} years old`}
+                    >{age}</option>
+                        : <option
+                            key={index}
+                            value={`value${index} years old`}
+                        >{age}</option>
                 ))}
             </select>
             <p className="arrow-hidden arrow">

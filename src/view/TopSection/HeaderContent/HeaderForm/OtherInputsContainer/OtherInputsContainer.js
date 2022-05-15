@@ -36,6 +36,8 @@ function OtherInputsContainer(props) {
         });
     }
 
+    // console.log(Date.parse(value[""][0]._d))
+    // console.log(Date.parse(value[""][1]._d))
 
     return (
         <div className="left-container">

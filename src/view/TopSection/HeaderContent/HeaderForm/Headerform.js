@@ -14,8 +14,8 @@ const useForm = (setSearchValue) => {
     const [count1, setCount1] = useState(1);
     const [count2, setCount2] = useState(0);
     const [count3, setCount3] = useState(1);
-
     const {data, setData} = useContext(TopSectionContext);
+    const [childrenAge, setChildrenAge] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -47,6 +47,7 @@ const useForm = (setSearchValue) => {
         }
 
     };
+    console.log(values[`user-destination`]);
 
     return {
         values,
@@ -62,6 +63,8 @@ const useForm = (setSearchValue) => {
         setCount2,
         setCount3,
         data,
+        childrenAge,
+        setChildrenAge
     };
 }
 
@@ -79,11 +82,15 @@ const HeaderForm = ( {setSearchValue} ) => {
         setCount1,
         setCount2,
         setCount3,
-        data
+        data,
+        childrenAge,
+        setChildrenAge
 
     } = useForm(setSearchValue);
 
     const searchContext = data["user-destination"];
+
+
 
         return (
                 <form onSubmit={handleSubmit} action="" className="form-main col-lg-12">
@@ -105,6 +112,8 @@ const HeaderForm = ( {setSearchValue} ) => {
                         count3={count3}
                         setCount3={setCount3}
                         isToggleNumbers={isToggleNumbers}
+                        childrenAge={childrenAge}
+                        setChildrenAge={setChildrenAge}
                     />
                 </form>
         );

@@ -11,6 +11,8 @@ function FiltersInForm(props) {
     const setCount2 = props.setCount2;
     const count3 = props.count3;
     const setCount3 = props.setCount3;
+    const childrenAge = props.childrenAge;
+    const setChildrenAge = props.setChildrenAge;
 
     return (
         <>
@@ -27,7 +29,11 @@ function FiltersInForm(props) {
                             {count2 > 0 &&
                             <>
                                 {[...Array(count2)].fill(null).map((item, index) =>
-                                    <SelectorAge key={index} />
+                                    <SelectorAge
+                                        key={index}
+                                        childrenAge={childrenAge}
+                                        setChildrenAge={setChildrenAge}
+                                    />
                                 )}
                             </>
                             }

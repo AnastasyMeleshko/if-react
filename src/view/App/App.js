@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-
 import 'antd/dist/antd.css';
-
 import './App.css';
 import '../../assets/fonts/Fonts.css';
 import '../../assets/img/Sprite.svg';
