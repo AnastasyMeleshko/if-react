@@ -7,6 +7,10 @@ import CardItem from "../../components/CardItem/CardItem";
 import ArrowElement from "../../components/ArrowElement/ArrowElement";
 import ButtonItem from "../../components/ButtonItem/ButtonItem";
 import {useNavigate} from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../../slickSettings.css";
 
 const url = `https://fe-student-api.herokuapp.com/api/hotels`;
 
@@ -48,6 +52,53 @@ function AvailableSection( props ) {
     const {data, loading} = useFetch(`${url}?search=${searchValue}`);
 
     let showAvailable = false;
+
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        nextArrow: <ArrowElement id="arrow-homes" className="arrow-homes"/>,
+        prevArrow: <ArrowElement id="arrow-homes-left" className="arrow-homes-left"/>,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
 
     const getData = (data) => {
 
@@ -92,18 +143,17 @@ function AvailableSection( props ) {
         <section className="available-hotels">
             <div className="available-container container col-lg-12">
                 <SectionTitle text='Available hotels' title='available-title' id="available-title"/>
-                <div className="available-items col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div className="available-items-slider col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        {getData(data).map(element =>
-                            <CardItem  key={element.id} id={element.id} item={element} useClass="available-item card-item col-lg-3 col-md-4 col-sm-6 col-xs-6"/>
-                        )}
-                    </div>
-                    <div className="arrow-homes-left">
-                        <ArrowElement id="arrow-homes-left" key="arrow-1"/>
-                    </div>
-                    <div className="arrow-homes">
-                        <ArrowElement id="arrow-homes" key="arrow-2"/>
-                    </div>
+                <div className="available-items col-lg-12">
+                        <Slider {...settings} className="available-items-slider col-lg-12">
+                            {getData(data).map(element =>
+                                <CardItem
+                                    key={element.id}
+                                    id={element.id}
+                                    item={element}
+                                    useClass="available-item card-item"
+                                />
+                            )}
+                        </Slider>
                 </div>
             </div>
         </section>

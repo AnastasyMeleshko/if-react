@@ -6,7 +6,7 @@ import ArrowElement from "../../components/ArrowElement/ArrowElement";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./slickSettings.css";
+import "../../slickSettings.css";
 
 class HomesSection extends React.Component {
 
