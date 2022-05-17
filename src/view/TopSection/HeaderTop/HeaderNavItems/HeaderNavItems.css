@@ -44,6 +44,10 @@
     align-items: center;
 }
 
+.header-icon.account-icon.yellow-icon {
+    fill: #F5BD41;
+}
+
 @media only screen and (max-width: 480px) {
     .header-line-block {
         display: none;

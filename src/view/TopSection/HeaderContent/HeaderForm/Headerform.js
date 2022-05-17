@@ -1,12 +1,12 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import "./HeaderForm.css";
 import DestinationShownInput from "./DestinationShownInput/DestinationShownInput";
 import FiltersInForm from "./FiltersInForm/FiltersInForm";
 import OtherInputsContainer from "./OtherInputsContainer/OtherInputsContainer";
+import {TopSectionContext} from "../../../../context/TopSectionData/TopSectionData";
 
 const useForm = (setSearchValue) => {
-
     const navigate = useNavigate();
     const [values, setValues] = useState({});
     const [isToggleNumbers, setIsToggleNumbers] = useState(false);
@@ -14,6 +14,8 @@ const useForm = (setSearchValue) => {
     const [count1, setCount1] = useState(1);
     const [count2, setCount2] = useState(0);
     const [count3, setCount3] = useState(1);
+    const {data, setData} = useContext(TopSectionContext);
+    const [childrenAge, setChildrenAge] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,21 +37,17 @@ const useForm = (setSearchValue) => {
             [e.target.name] : e.target.value,
         });
 
+        setData({
+                ...data,
+                [e.target.name] : e.target.value
+        })
+
         if (e.target.name === `user-destination`) {
             setSearchValue(e.target.value);
         }
 
-        // destination inputs the same value update
-
-        if (e.target.id === `user-destination`) {
-            document.getElementById("user-destination-hidden").value = `${e.target.value}`;
-        }
-
-        if (e.target.id === `user-destination-hidden`) {
-            document.getElementById("user-destination").value = `${e.target.value}`;
-        }
-
     };
+    console.log(values[`user-destination`]);
 
     return {
         values,
@@ -64,13 +62,15 @@ const useForm = (setSearchValue) => {
         setCount1,
         setCount2,
         setCount3,
+        data,
+        childrenAge,
+        setChildrenAge
     };
 }
 
 const HeaderForm = ( {setSearchValue} ) => {
 
     const {
-        values,
         handleSubmit,
         handleChange,
         isToggleNumbers,
@@ -82,15 +82,19 @@ const HeaderForm = ( {setSearchValue} ) => {
         setCount1,
         setCount2,
         setCount3,
+        data,
+        childrenAge,
+        setChildrenAge
 
     } = useForm(setSearchValue);
 
-    const name = values.name;
-    // console.log(values["user-destination"])
+    const searchContext = data["user-destination"];
+
+
 
         return (
                 <form onSubmit={handleSubmit} action="" className="form-main col-lg-12">
-                    <DestinationShownInput funcForChange={handleChange} value={name}/>
+                    <DestinationShownInput funcForChange={handleChange} value={searchContext}/>
                     <OtherInputsContainer
                         count1={count1}
                         count2={count2}
@@ -98,7 +102,7 @@ const HeaderForm = ( {setSearchValue} ) => {
                         handleNumbersWrapClick={handleNumbersWrapClick}
                         borderColor={borderNumbersWrapColor}
                         funcForChange={handleChange}
-                        value={name}
+                        value={searchContext}
                     />
                     <FiltersInForm
                         count1={count1}
@@ -108,6 +112,8 @@ const HeaderForm = ( {setSearchValue} ) => {
                         count3={count3}
                         setCount3={setCount3}
                         isToggleNumbers={isToggleNumbers}
+                        childrenAge={childrenAge}
+                        setChildrenAge={setChildrenAge}
                     />
                 </form>
         );

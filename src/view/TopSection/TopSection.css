@@ -13,6 +13,7 @@
     padding-bottom: 0;
     padding-top: 50px;
     height: 100%;
+    position: relative;
 }
 
 .top-section-background {
@@ -23,16 +24,16 @@
 
 @media only screen and (max-width: 480px) {
     .top-section {
-        height: 100%;
-        min-height: 530px;
+        height: 100vh;
+        min-height: 900px;
     }
 
 }
 
 @media only screen and (min-width: 480px) {
     .top-section {
-        height: 100%;
-        min-height: 530px;
+        height: 100vh;
+        min-height: 900px;
     }
 }
 

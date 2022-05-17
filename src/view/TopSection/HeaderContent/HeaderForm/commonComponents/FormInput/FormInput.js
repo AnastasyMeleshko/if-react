@@ -11,7 +11,9 @@ function FormInput(props) {
     const funcToHappen = props.onChange;
 
         return (
-            <input onChange={funcToHappen} type={inputType} id={inputId} className={inputClass} name={inputName} key={inputId} autoComplete={offText} required={required}/>
+            ((inputId === "user-destination") || (inputId === "user-destination-hidden")) ?
+              <input value={props.value || ''} onChange={funcToHappen} type={inputType} id={inputId} className={inputClass} name={inputName} key={inputId} autoComplete={offText} required={required}/>
+           :  <input onChange={funcToHappen} type={inputType} id={inputId} className={inputClass} name={inputName} key={inputId} autoComplete={offText} required={required}/>
         );
     }
 

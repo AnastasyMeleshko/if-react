@@ -9,7 +9,6 @@
 .available-items {
     display: flex;
     justify-content: center;
-    overflow: hidden;
 
 }
 

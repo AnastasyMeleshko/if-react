@@ -36,10 +36,12 @@ function OtherInputsContainer(props) {
         });
     }
 
+    // console.log(Date.parse(value[""][0]._d))
+    // console.log(Date.parse(value[""][1]._d))
 
     return (
         <div className="left-container">
-            <DestinationHiddenInput funcForChange={props.funcForChange} value={props.name}/>
+            <DestinationHiddenInput funcForChange={props.funcForChange} value={props.value}/>
             <div className="form-dates">
                 <RangePicker
                     format="ddd DD MMM" bordered={false} disabledDate={current => {

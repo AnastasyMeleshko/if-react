@@ -3,6 +3,10 @@ import "./HomesSection.css";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import CardItem from "../../components/CardItem/CardItem";
 import ArrowElement from "../../components/ArrowElement/ArrowElement";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../../slickSettings.css";
 
 class HomesSection extends React.Component {
 
@@ -28,6 +32,53 @@ class HomesSection extends React.Component {
         })
     }
 
+    settings = {
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        nextArrow: <ArrowElement id="arrow-homes" className="arrow-homes"/>,
+        prevArrow: <ArrowElement id="arrow-homes-left" className="arrow-homes-left"/>,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
 
     render() {
 
@@ -37,16 +88,10 @@ class HomesSection extends React.Component {
             <section className="homes">
                 <div className="homes-container container col-lg-12">
                     <SectionTitle text='Homes guests loves' id='homes-guests' title='homes-title'/>
-                    <div className="homes-group-items col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="homes-group-items-slider col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            {data.map(element => <CardItem key={element.id} item={element} useClass="homes-item card-item col-lg-3 col-md-4 col-sm-6 col-xs-6"/>)}
-                        </div>
-                        <div className="arrow-homes-left">
-                            <ArrowElement id="arrow-homes-left" key={this.id}/>
-                        </div>
-                        <div className="arrow-homes">
-                            <ArrowElement id="arrow-homes" key={this.id}/>
-                        </div>
+                    <div className="homes-group-items col-lg-12">
+                        <Slider {...this.settings} className="homes-group-items-slider col-lg-12">
+                                {data.map(element => <CardItem key={element.id} item={element} useClass="homes-item card-item"/>)}
+                        </Slider>
                     </div>
                 </div>
             </section>
