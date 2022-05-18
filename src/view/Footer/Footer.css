@@ -1,15 +1,17 @@
 .footer {
-    background-color: #10367C;
-    color: #FFFFFF;
+    background-color: var(--footer-background-color);
+    color: var(--footer-links-color);
     order: 7;
+    transition: background-color, color 200ms linear;
 }
 
 .footer-logo {
-    fill: #FFFFFF;
+    fill: var(--footer-logo-color);
     height: 19px;
     width: 98px;
     text-align: center;
     display: none;
+    transition: fill linear 200ms;
 }
 
 .footer-items-wrapper {
@@ -30,12 +32,13 @@
 .footer a {
     text-decoration: none;
     cursor: pointer;
-    color: #FFFFFF;
+    color: var(--footer-links-color);
     font-family: Roboto, sans-serif;
     font-size: 20px;
     line-height: 24px;
     font-style: normal;
     font-weight: 500;
+    transition: color 200ms linear;
 }
 
 .footer a:hover {

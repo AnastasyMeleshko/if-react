@@ -1,4 +1,5 @@
 @import url('assets/fonts/Fonts.css');
+@import url('./theme-switcher.css');
 
 :root {
     --reviews-arrow-height: 40px;
@@ -11,6 +12,7 @@
     --btn-minus-color: #CECECE;
     --text-for-input-numbers: #000000;
 }
+
 
 * {
     margin: 0;

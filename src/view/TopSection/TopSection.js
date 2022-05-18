@@ -9,6 +9,7 @@ function TopSection(props)  {
     const setSearchValue = props.setSearchValue;
     const setUser = props.setUser;
     const user = props.user;
+    const handleThemeClick = props.handleThemeClick;
 
     return (
         <TopSectionDataProvider>
@@ -17,14 +18,22 @@ function TopSection(props)  {
                     <div className="top-section-wrapper container">
                         {user && (
                             <>
-                            <HeaderTop  user={user} setUser={setUser}/>
+                            <HeaderTop
+                                user={user}
+                                setUser={setUser}
+                                handleThemeClick={handleThemeClick}
+                            />
                             <HeaderContent setSearchValue={setSearchValue}/>
                             </>
 
                         )}
                         {!user && (
                             <>
-                            <HeaderTop user={user} setUser={setUser}/>
+                            <HeaderTop
+                                user={user}
+                                setUser={setUser}
+                                handleThemeClick={handleThemeClick}
+                            />
                             <AuthorizationForm user={user} setUser={setUser}/>
                             </>
                         )}

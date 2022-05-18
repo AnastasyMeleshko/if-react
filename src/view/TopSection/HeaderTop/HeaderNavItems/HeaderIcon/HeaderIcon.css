@@ -1,5 +1,11 @@
 .header-icon {
     fill: #FFFFFF;
+    transition: all 200ms linear;
+}
+
+.header-icon.night-icon {
+    fill: var(--header-icon-color);
+    transition: all 200ms linear;
 }
 
 .header-icon:hover {

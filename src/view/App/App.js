@@ -9,17 +9,23 @@ import TopSection from "../TopSection/TopSection";
 import AvailableSection from "../AvailableSection/Available";
 import HotelCard from "../AvailableSection/HotelCard/HotelCard";
 import Footer from "../Footer/Footer";
+import { useTheme } from "../../hooks/use-theme";
 
 
 function App() {
 
+  const {theme, setTheme} = useTheme();
   const [searchValue, setSearchValue] = useState("");
   const [user, setUser] = useState(null);
+
+  const handleThemeClick = () => {
+      theme === "light" ? setTheme("dark") : setTheme("light");
+  }
 
   return (
       <Router>
           <>
-              <TopSection setSearchValue={setSearchValue} searchValue={searchValue} setUser={setUser} user={user}/>
+              <TopSection handleThemeClick={handleThemeClick} setSearchValue={setSearchValue} searchValue={searchValue} setUser={setUser} user={user}/>
               <main className="main-sections-wrapper">
                   {user ? (
                       <Routes>

@@ -1,0 +1,24 @@
+/* dark theme */
+
+html[data-theme="dark"] {
+    --header-icon-color: #FFFFFF;
+    --header-background-img: url(../src/assets/img/Background-image.jpg);
+    --homes-section-background-color: #EAF0F9;
+    --available-section-background-color: #EAF0F9;
+    --footer-background-color: #10367C;
+    --footer-links-color: #FFFFFF;
+    --logo-color: #3077C6;
+    --footer-logo-color: #FFFFFF;
+}
+
+/* light theme */
+html[data-theme="light"] {
+    --header-icon-color: #F5BD41;
+    --header-background-img: url(../src/assets/img/light-theme.jpg);
+    --homes-section-background-color: #FFFFFF;
+    --available-section-background-color: #FFFFFF;
+    --footer-background-color: #bcdcffed;
+    --footer-links-color: #10367C;
+    --logo-color: #FFFFFF;
+    --footer-logo-color: #3077C6;
+}
