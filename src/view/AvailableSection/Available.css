@@ -1,5 +1,6 @@
 .available-hotels {
-    background-color: #EAF0F9;
+    background-color: var(--available-section-background-color);
+    transition: background-color linear 200ms;
 }
 
 .available-container {

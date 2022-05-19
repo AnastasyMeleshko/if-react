@@ -4,10 +4,11 @@
 }
 
 .homes {
-    background-color: #EAF0F9;
+    background-color: var(--homes-section-background-color);
     display: flex;
     flex-direction: column;
     order: 3;
+    transition: background-color 200ms linear;
 }
 
 .homes-container {

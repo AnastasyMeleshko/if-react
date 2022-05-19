@@ -4,7 +4,7 @@ import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import HeaderNavItems from "./HeaderNavItems/HeaderNavItems";
 import SignOut from "../ Authorization/SignOut/SignOut";
 
-function HeaderTop({ user, setUser}) {
+function HeaderTop({ user, setUser, handleThemeClick}) {
     const [isOpenLogOut, setIsOpenLogOut] = useState({
         isOpen : false,
     });
@@ -12,7 +12,7 @@ function HeaderTop({ user, setUser}) {
        return (
             <nav className="header-block col-lg-12">
                 <HeaderLogo/>
-                <HeaderNavItems user={user} isOpenLogOut={isOpenLogOut} setIsOpenLogOut={setIsOpenLogOut}/>
+                <HeaderNavItems handleThemeClick={handleThemeClick} user={user} isOpenLogOut={isOpenLogOut} setIsOpenLogOut={setIsOpenLogOut}/>
                 {user && isOpenLogOut.isOpen && (
                     <SignOut setUser={setUser}/>
                 )}

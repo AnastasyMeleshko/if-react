@@ -47,7 +47,7 @@ const useForm = (setSearchValue) => {
         }
 
     };
-    console.log(values[`user-destination`]);
+    // console.log(values[`user-destination`]);
 
     return {
         values,

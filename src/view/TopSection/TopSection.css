@@ -1,5 +1,5 @@
 .top-section {
-    background-image: url(../../assets/img/Background-image.jpg);
+    background-image: var(--header-background-img);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -7,6 +7,7 @@
     min-height: 900px;
     width: 100%;
     order: 1;
+    transition: background-image 400ms ease-out;
 }
 
 .top-section-wrapper {
@@ -24,7 +25,7 @@
 
 @media only screen and (max-width: 480px) {
     .top-section {
-        height: 100vh;
+        height: 70vh;
         min-height: 900px;
     }
 
@@ -32,7 +33,7 @@
 
 @media only screen and (min-width: 480px) {
     .top-section {
-        height: 100vh;
+        height: 70vh;
         min-height: 900px;
     }
 }

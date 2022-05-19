@@ -23,6 +23,8 @@
 .night-icon {
     height: 30px;
     width: 30px;
+    fill: var(--header-icon-color);
+    transition: all 200ms linear;
 }
 
 .account-icon {
